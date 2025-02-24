@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url('@/assets/fonts/NotoSansTC-Bold.ttf');
+  font-weight: 700;
+}
+
+/* @font-face {
+  font-family: "Noto Sans TC";
+  src: url('@/assets/fonts/NotoSansTC-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url('@/assets/fonts/NotoSansTC-Medium.ttf');
+  font-weight: 500;
+} */
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url('@/assets/fonts/NotoSansTC-Regular.ttf');
+  font-weight: 400;
+}
+
+/* base層 */
+@layer base {
+  :root {
+    @apply font-NotoSans;
+    --h1-size: 1.5rem;
+    --h1-weight: 700;
+    --h1-lineHeight: 3rem;
+    --h2-size: 1.375rem;
+    --h2-weight: 700;
+    --h2-lineHeight: 1.875rem;
+    --h3-size: 1.125rem;
+    --h3-weight: 700;
+    --h3-lineHeight: 1.75rem;
+    --h4-size: 1rem;
+    --h4-weight: 700;
+    --h4-lineHeight: 1.5rem;
+    --h5-size: 0.875rem;
+    --h5-weight: 700;
+    --h5-lineHeight: 1.125rem;
+    --body1-size: 1.125rem;
+    --body1-weight: 400;
+    --body1-lineHeight: 1.75rem;
+    --body2-size: 1rem;
+    --body2-weight: 400;
+    --body2-lineHeight: 1.5rem;
+    --body3-size: 0.875rem;
+    --body3-weight: 400;
+    --body3-lineHeight: 1.375rem;
+  }
+}
+
+/* components層 */
+@layer components {
+}
+
+/* utilities層（最優先） */
+@layer utilities {
+}
