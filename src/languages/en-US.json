@@ -1,5 +1,82 @@
 {
   "HomePage": {
     "homePage": "homePage"
+  },
+  "Header": {
+    "about": "WHY WAG?",
+    "service": "SOLUTIONS",
+    "example": "CASE STUDIES",
+    "blog": "BLOG",
+    "contact": "CONTACT"
+  },
+  "Gimmick": {
+    "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><hr>Years of Experience",
+    "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><hr>Clients Served",
+    "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><hr>New Customers<hr>Reach",
+    "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><hr>Ads Implemented",
+    "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><hr>Daily Order Volume"
+  },
+  "paidAD" : {
+    "content": "We're here to help your business with <span class='text-[#DF6E00]'>paid ads</span>.<hr> Trusted by over 500 businesses."
+  },
+  "paidADList": {
+    "card1": {
+        "tag": "Paid Advertising",
+        "title": "Increase ROI",
+        "content": "300% Growth Through Targeted Advertising: See the Impact"
+    },
+    "card2": {
+        "tag": "SMS+Email Marketing",
+        "title": "Engage Customers",
+        "content": "How Email Marketing Drove a 250% Increase in Engagement and Conversions"
+    },
+    "card3": {
+        "tag": "Website Design",
+        "title": "Professional Look",
+        "content": "Building a Strong Brand: How Professional Website Design Elevates Your Business Image"
+    },
+    "more": "Learn More"
+  },
+  "feature": {
+    "Boost": {
+      "title": "Boost Your Brand with Us!",
+      "content": "Turning Visitors into Profits!<hr> We make sure they convert into loyal customers,<hr> driving your sales to new heights."
+    },
+    "More": {
+      "title": "More Than a One-Time Sale",
+      "content": "We help you build lasting relationships, turning<hr> customers into repeat buyers and maximizing<hr> revenue over the long term."
+    },
+    "Pay": {
+      "title": "Pay Less, Gain More",
+      "content": "Why overspend when you can reduce costs and<hr> acquire better-quality customers? Our approach<hr> ensures your marketing budget goes further."
+    },
+    "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today"
+  },
+  "Solutions": {
+    "title": "Solutions for Every Industry",
+    "content": "Boost Your Brand with Us! Get started today and access exclusive insights and premium resources to elevate your business.",
+    "button": "Get Started"
+  },
+  "sendEmail": {
+    "title": "Stay ahead with marketing insights<hr> and trends from our newsletter!",
+    "email": "Email",
+    "placeholder": "Enter your email",
+    "Subscribe": "Subscribe"
+  },
+  "footer": {
+    "copyright": "© 2025 WAG MARKETING",
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "terms": "Terms of use",
+      "privacy": "Privacy Policy"
+    },
+    "contact": {
+      "title": "Contact us",
+      "phone": "+1 929-545-4470",
+      "email": "contact@wag.marketing"
+    }
   }
 }

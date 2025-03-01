@@ -66,7 +66,7 @@ export default {
         ],
       },
       fontFamily: {
-        NotoSans: ["Noto Sans TC"],
+        NotoSans: ["Noto Sans TC, Roboto"],
       },
       colors: {
         Primary: "#205ED5",
@@ -101,7 +101,7 @@ export default {
         ThemePrimaryBG: "var(--ThemePrimaryBG)",
         ThemePrimaryLight: "var(--ThemePrimaryLight)",
         StatusRed: "#F23C47",
-        StatusGreen: '#3ABC5D',
+        StatusGreen: "#3ABC5D",
         BGBorder: "var(--BGBorder)",
         SwitchPrimary: "var(--SwitchPrimary)",
         WordWhite: "var(--WordWhite)",
@@ -113,7 +113,7 @@ export default {
         BGBtnBar: "var(--BGBtnBar)",
         BGtitle: "var(--BGtitle)",
         BGCancel: "var(--BGCancel)",
-        BGBg: "var(--BGBg)"
+        BGBg: "var(--BGBg)",
       },
       screens: {
         miniMobile: { max: "320px" },
@@ -136,6 +136,5 @@ export default {
       },
     },
   },
-  plugins: []
-}
-
+  plugins: [require("tailwindcss-primeui")],
+};

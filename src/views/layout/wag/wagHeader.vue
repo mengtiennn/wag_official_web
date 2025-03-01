@@ -1,7 +1,90 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+import { ref, reactive, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import Select from 'primevue/select';
+import { Session } from '@/utils/sessionManagement'
+
+const router = useRouter()
+const { locale } = useI18n()
+
+const routerData = reactive([
+  { label: 'about', link: '/' },
+  { label: 'service', link: '/service' },
+  { label: 'example', link: '/example' },
+  { label: 'blog', link: '/blog' },
+  { label: 'contact', link: '/contact' }
+])
+
+const lang = ref('')
+const langList = ref([
+  { label: 'en', value: 'en-US' },
+  { label: '中文', value: 'zh-TW' }
+])
+const showHamburger = ref(false)
+
+const handleLanguageChange = (event: any) => {
+  const selectedLang = event.value
+  locale.value = selectedLang
+  Session.setSessionLang(selectedLang)
+}
+
+onMounted(() => {
+  const savedLang = Session.getSessionLang()
+  if (savedLang) {
+    lang.value = savedLang
+    locale.value = savedLang
+  } else {
+    lang.value = 'en-US'
+    locale.value = 'en-US'
+  }
+})
 </script>
 <template>
-  <div class="w-screen">
-    Wag Header
+  <div class="Roboto flex bg-[#F9F7F4] pt-[22px] pl-[90px] pr-[90px] pb-[22px] justify-center items-center laptop:justify-center tablet:justify-center laptop:pt-[10px] laptop:pb-[10px] tablet:pt-[10px] tablet:pb-[10px] fixed top-0 left-0 z-50 w-full mobile:px-6">
+    <div class="flex justify-between items-center w-full desktop:max-w-[1000px] tablet:justify-center">
+      <div class="flex items-center gap-[8rem]">
+        <div class="flex items-end cursor-pointer" @click="router.push('/')">
+          <img class="w-[85px] h-[40px] object-contain" src="@/assets/img/logo.svg" alt="logo">
+        </div>
+        <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden">
+          <NuxtLink v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+        </div>
+      </div>
+      <div class="mobile:hidden">
+        <Select
+          v-model="lang"
+          :options="langList"
+          optionLabel="label"
+          optionValue="value"
+          @change="handleLanguageChange"
+          class="w-[3.5rem]"
+        />
+      </div>
+    </div>
+    <img src="@/assets/img/menuWhite.svg" class="absolute top-[22px] right-6 cursor-pointer desktop:hidden mac:hidden" @click="showHamburger = true">
   </div>
+  <Transition name="slide-fade">
+    <div class="w-full h-full fixed top-0 left-0 bg-white z-50 flex items-center pt-[75px] flex-col" v-if="showHamburger">
+      <img src="@/assets/img/close.svg" class="fixed top-[16px] right-4 cursor-pointer desktop:hidden" @click="showHamburger = false">
+      <div class="flex gap-[24px] text-text-black flex-col items-center">
+        <NuxtLink v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+      </div>
+    </div>
+  </Transition>
 </template>
+<style lang="scss" scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+</style>

@@ -1,5 +1,82 @@
 {
     "HomePage": {
         "homePage": "首頁"
+    },
+    "Header": {
+        "about": "关于ＷＡＧ",
+        "service": "服务项目",
+        "example": "案例分享",
+        "blog": "BLOG",
+        "contact": "联系我们"
+    },
+    "Gimmick": {
+        "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><hr>多年經驗",
+        "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><hr>服務客戶數",
+        "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><hr>新客觸達",
+        "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><hr>投放廣告數",
+        "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><hr>日均訂單量"
+    },
+    "paidAD" : {
+        "content": "我们助力您的业务成长，提供专业<span class='text-[#DF6E00]'>付费广告</span><hr>超过1000+商家信赖之选"
+    },
+    "paidADList": {
+        "card1": {
+            "tag": "广告投放",
+            "title": "精准投放至本地用户",
+            "content": "通过精准广告投放实现300%增长：见证成效"
+        },
+        "card2": {
+            "tag": "短信及邮件营销",
+            "title": "提升现有客户忠诚度",
+            "content": "电子邮件营销如何推动参与度和转化率增长250%"
+        },
+        "card3": {
+            "tag": "网站设计",
+            "title": "增加曝光率",
+            "content": "打造强大品牌：专业网站设计如何提升您的业务形象"
+        },
+        "more": "更多成功案例"
+    },
+    "feature": {
+        "Boost": {
+            "title": "实现可持续性的营收增长",
+            "content": "专业分析后的精准营销策略<hr>灵活的服务项目搭配<hr>增加行业竞争优势"
+          },
+          "More": {
+            "title": "减少大量时间与花费成本",
+            "content": "整合多领域专家团队<hr>总结多年经验减少试错成本<hr>导入AI科技的行销工具"
+          },
+          "Pay": {
+            "title": "完全值得您信任的专属团队",
+            "content": "24小时在线的客户经理<hr>免费谘询的各领域专家<hr>弹性的合作模式"
+          },
+          "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today"
+    },
+    "Solutions": {
+      "title": "为各行业提供专业解决方案",
+      "content": "与我们一起提升您的品牌！立即开始，获取独家洞察和优质资源，助力您的业务腾飞",
+      "button": "立即免费谘询"
+    },
+    "sendEmail": {
+        "title": "订阅我们的电子报，掌握最新营销洞察与趋势，助您领先市场！",
+        "email": "Email",
+        "placeholder": "输入您的邮箱",
+        "Subscribe": "立即订阅"
+    },
+    "footer": {
+      "copyright": "© 2025 WAG MARKETING",
+      "company": {
+        "title": "公司资讯",
+        "about": "关于我们",
+        "blog": "案例分享",
+        "careers": "征才资讯",
+        "terms": "使用条款",
+        "privacy": "隐私政策"
+      },
+      "contact": {
+        "title": "联系我们",
+        "phone": "+1 929-545-4470",
+        "email": "contact@wag.marketing"
+      }
     }
 }
