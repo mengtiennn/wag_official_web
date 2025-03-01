@@ -1,32 +1,93 @@
 <script lang="ts" setup>
 import inputText from 'primevue/inputtext'
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 const gimmickList = ref([
   'first', 'second', 'third', 'fourth', 'fifth'
 ])
 
 const emailModel = ref('')
+
+const words = ['paid ads', 'website', 'design', 'traffic', 'growth']
+const currentIdx = ref(0)
+const currentWord = ref(words[currentIdx.value])
+let interval = null
+const cardData = [
+  { title: 'cardOne' },
+  { title: 'cardTwo' },
+  { title: 'cardThree' }
+]
+
+onMounted(() => {
+  interval = setInterval(() => {
+    currentIdx.value = (currentIdx.value + 1) % words.length
+    currentWord.value = words[currentIdx.value]
+  }, 2000)
+})
+onUnmounted(() => {
+  if (interval) clearInterval(interval)
+})
 </script>
 <template>
   <div class="bg-[#F9F7F4] Roboto">
+    <!-- banner -->
+    <div class="w-full flex justify-center">
+      <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%]">
+        <div class="flex flex-col w-1/2">
+          <div class="Roboto font-[500] text-[48px] leading-[56.25px] text-black max-w-[482px]">{{ $t('banner.title') }}
+          </div>
+          <div class="Roboto font-[400] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
+          <div
+            class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
+            {{ $t('banner.button') }}</div>
+        </div>
+        <div class="relative">
+          <img src="@/assets/img/banner1.png" alt="banner1">
+          <img src="@/assets/img/banner2.png" alt="banner1" class="w-[207px] absolute top-[80px] left-[-120px]">
+          <img src="@/assets/img/banner4.png" alt="banner1" class="w-[203px] absolute top-[185px] left-[178px]">
+          <img src="@/assets/img/banner3.png" alt="banner1" class="w-[122px] absolute top-[295px] left-[-61px]">
+        </div>
+      </div>
+    </div>
+
     <div id="gimmick" class="flex justify-evenly py-[2.5rem] mobile:overflow-auto">
-      <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[50%]" v-html="$t(`Gimmick.${item}`)" />
+      <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[50%]"
+        v-html="$t(`Gimmick.${item}`)" />
     </div>
-    <div id="paidAD" class="h-[150px] flex justify-center items-center Roboto my-[2.5rem] mobile:hidden">
-      <div class="text-[40px]" v-html="$t('paidAD.content')"></div>
+
+    <!-- 文字特效區塊 -->
+    <div class="w-full flex justify-center mt-[10rem] mb-[8rem]">
+      <div id="paidAD" class="flex flex-col w-[80vw] items-center">
+        <div class="flex">
+          <div class="text-[48px] Roboto font-[500]">{{ $t('paidAD.content1') }}</div>
+          <div
+            class="ml-[12px] font-[500] text-[48px] w-[190px] h-[80px] relative overflow-hidden inline-block text-[#DF6E00]">
+            <transition-group name="slide">
+              <div v-for="(word, index) in [currentWord]" :key="word" class="inline-block absolute w-full text-left">
+                {{ word }}
+              </div>
+            </transition-group>
+          </div>
+        </div>
+        <div class=" text-[48px] Roboto font-[500]">{{ $t('paidAD.content2') }}</div>
+      </div>
     </div>
+
     <div id="paidADCardList" class="flex flex-col justify-center items-center gap-[1.5rem] Roboto mobile:hidden">
       <div class="flex justify-evenly w-[80%] gap-[1.5rem]">
         <div v-for="(item) in 3" :key="item" class="bg-[#F0F0F0] pt-[30px] px-[25px] rounded-[8px]">
           <img src="@/assets/img/light.png" alt="" class="rounded-[8px] object-contain">
           <div class="my-[1rem] flex flex-col gap-[14px]">
-            <div class="w-max text-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">{{ $t(`paidADList.card${item}.tag`) }}</div>
+            <div
+              class="w-max text-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
+              {{ $t(`paidADList.card${item}.tag`) }}</div>
             <div>{{ $t(`paidADList.card${item}.content`) }}</div>
             <div class="font-[600]">{{ $t(`paidADList.card${item}.title`) }}</div>
           </div>
         </div>
       </div>
-      <div class="w-max text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">{{ $t('paidADList.more') }}</div>
+      <div
+        class="w-max text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">
+        {{ $t('paidADList.more') }}</div>
     </div>
     <div id="feature" class="flex justify-evenly px-[15%] my-[10rem] mobile:hidden">
       <div class="flex flex-col justify-evenly items-center gap-[8rem]">
@@ -48,18 +109,43 @@ const emailModel = ref('')
         </div>
       </div>
     </div>
-    <div id="solutions" class="bg-[#F0F0F0] w-full h-[312px] flex flex-col justify-center items-center gap-[1.5rem] Roboto my-[2.5rem] mobile:hidden">
+    <div id="solutions"
+      class="bg-[#F0F0F0] w-full h-[312px] flex flex-col justify-center items-center gap-[1.5rem] Roboto my-[2.5rem] mobile:hidden">
       <div class="text-[#DF6E00] text-[40px] font-bold">{{ $t('Solutions.title') }}</div>
       <div class="w-[50%] text-center">{{ $t('Solutions.content') }}</div>
-      <div class="text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">{{ $t('Solutions.button') }}</div>
+      <div
+        class="text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">
+        {{ $t('Solutions.button') }}</div>
     </div>
+
+    <!-- How WAG works -->
+    <div class="w-full items-center flex flex-col mt-[10rem]">
+      <div class="flex flex-col items-center gap-[12px]">
+        <span class="Roboto text-[48px] font-[500] leading-[56.25px]">{{ $t('howWagWorks.title') }}</span>
+        <span class="text-[#545F71] leading-[22px]">{{ $t('howWagWorks.subTitle') }}</span>
+      </div>
+      <div class="flex gap-[60px] mt-[50px]">
+        <div v-for="(card, idx) in cardData" :key="idx+'card'" class="flex flex-col gap-[20px] items-center">
+          <span class="text-[96px] font-bold">{{ idx + 1 }}</span>
+          <div class="border-[1px] border-[#D8D8D8] rounded-[26px]">
+            <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-[325px]">
+            <div class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-[325px] rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center" :class="{'px-[40px]': idx == 0}">
+              {{ $t(`howWagWorks.${card.title}`) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="sendEmail" class="flex justify-center items-center my-[5rem] mobile:hidden">
       <div class="flex items-center justify-evenly gap-[10rem] bg-white p-[5rem] rounded-[8px]">
         <div class="text-[2rem]" v-html="$t('sendEmail.title')" />
         <div class="flex flex-col gap-[1.5rem]">
           <div class="font-[700] text-[18px]">{{ $t('sendEmail.email') }}</div>
-          <inputText class="w-[500px] !border-[1px] !border-solid !border-[#D8D8D8] !p-2 !rounded-md" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
-          <div class="bg-[#DF6E00] text-white rounded-lg w-max px-[24px] py-[12px]">{{ $t('sendEmail.Subscribe') }}</div>
+          <inputText class="w-[500px] !border-[1px] !border-solid !border-[#D8D8D8] !p-2 !rounded-md"
+            :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+          <div class="bg-[#DF6E00] text-white rounded-lg w-max px-[24px] py-[12px]">{{ $t('sendEmail.Subscribe') }}
+          </div>
         </div>
       </div>
     </div>
@@ -70,8 +156,21 @@ const emailModel = ref('')
   </div>
 </template>
 <style lang="scss" scoped>
-.Roboto{
+.Roboto {
   font-family: 'Roboto', sans-serif;
 }
-  
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 </style>

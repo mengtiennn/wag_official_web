@@ -17,7 +17,9 @@
     "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><hr>Daily Order Volume"
   },
   "paidAD" : {
-    "content": "We're here to help your business with <span class='text-[#DF6E00]'>paid ads</span>.<hr> Trusted by over 500 businesses."
+    "content": "We're here to help your business with <span class='text-[#DF6E00]'>paid ads</span>.<hr> Trusted by over 500 businesses.",
+    "content1": "We're here to help your business with",
+    "content2": "Trusted by over 500 businesses."
   },
   "paidADList": {
     "card1": {
@@ -78,5 +80,25 @@
       "phone": "+1 929-545-4470",
       "email": "contact@wag.marketing"
     }
+  },
+  "banner": {
+    "title": "With WAG, everything is within reach.",
+    "content": "With powerful marketing strategies and massive traffic boosts, your business will thrive with nonstop orders and endless opportunities. Join us to skyrocket your brand, maximize exposure, and drive unbeatable conversions!",
+    "button": "FREE CONSULTATION"
+  },
+  "howWagWorks": {
+    "title": "How WAG works",
+    "subTitle": "From strategy to success, we turn ideas into impactful results.",
+    "cardOne": "Outline, define, and budget your project.",
+    "cardTwo": "Meet your perfect team.",
+    "cardThree": "Ready to elevate your business.",
+    "contentTitle": "Trust us to take care of your marketing initiatives.",
+    "contentBtn": "FREE CONSULTATION",
+    "paid": "Paid Advertising",
+    "web": "Website Development",
+    "sms": "SMS + Email Marketing",
+    "local": "Local Business Markerting",
+    "social": "Social Media Management",
+    "gp": "Graphic Design"
   }
 }
