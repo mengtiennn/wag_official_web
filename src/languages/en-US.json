@@ -19,7 +19,8 @@
   "paidAD" : {
     "content": "We're here to help your business with <span class='text-[#DF6E00]'>paid ads</span>.<hr> Trusted by over 500 businesses.",
     "content1": "We're here to help your business with",
-    "content2": "Trusted by over 500 businesses."
+    "content2": "Trusted by over 500 businesses.",
+    "mbContent": "<span class='text-[#DF6E00] text-[24px]'>WAG</span>, based in New York, serves nearly 1,500 professionals globally, making us the top choice for international merchants. Our marketing services simplify management, expand reach, drive traffic, and boost your reputation, backed by 100% positive customer feedback."
   },
   "paidADList": {
     "card1": {
@@ -52,7 +53,17 @@
       "title": "Pay Less, Gain More",
       "content": "Why overspend when you can reduce costs and<hr> acquire better-quality customers? Our approach<hr> ensures your marketing budget goes further."
     },
-    "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today"
+    "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today",
+    "mobile": {
+      "title": "Begin your next project<hr> with us.",
+      "paid": "Paid<hr> Advertising",
+      "Website": "Website<hr> Development",
+      "SMS": "SMS<hr>+ Email Marketing",
+      "Local": "Local Business<hr> Marketing",
+      "Social": "Social Media<hr> Management",
+      "Graphic": "Graphic<hr> Design",
+      "button": "Get Started Now"
+    }
   },
   "Solutions": {
     "title": "Solutions for Every Industry",
@@ -78,7 +89,7 @@
     "contact": {
       "title": "Contact us",
       "phone": "+1 929-545-4470",
-      "email": "contact@wag.marketing"
+      "mail": "contact@wag.marketing"
     }
   },
   "banner": {

@@ -50,13 +50,15 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div id="gimmick" class="flex justify-evenly py-[2.5rem] mobile:overflow-auto">
+    <div id="gimmick" class="flex justify-evenly py-[2.5rem] mobile:overflow-auto mobile:flex-wrap">
       <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[50%]"
         v-html="$t(`Gimmick.${item}`)" />
     </div>
-
+    <!-- <div id="gimmick" class="flex flex-wrap justify-evenly py-[2.5rem] mobile:overflow-auto">
+      <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[40%] m-[5%]" v-html="$t(`Gimmick.${item}`)" />
+    </div> -->
     <!-- 文字特效區塊 -->
-    <div class="w-full flex justify-center mt-[10rem] mb-[8rem]">
+    <div class="w-full flex justify-center my-[5rem]">
       <div id="paidAD" class="flex flex-col w-[80vw] items-center">
         <div class="flex">
           <div class="text-[48px] Roboto font-[500]">{{ $t('paidAD.content1') }}</div>
@@ -71,6 +73,16 @@ onUnmounted(() => {
         </div>
         <div class=" text-[48px] Roboto font-[500]">{{ $t('paidAD.content2') }}</div>
       </div>
+    </div>
+
+    <div id="paidAD">
+      <div class="hidden mobile:flex mobile:flex-col px-[10%] gap-[2.5rem]">
+        <div class="text-[20px]" v-html="$t('paidAD.mbContent')" />
+        <img class="rounded-[2rem]" src="@/assets/img/light.png" alt="">
+      </div>
+      <!-- <div class="h-[150px] flex justify-center items-center Roboto my-[2.5rem] mobile:hidden">
+        <div class="text-[40px]" v-html="$t('paidAD.content')" />
+      </div> -->
     </div>
 
     <div id="paidADCardList" class="flex flex-col justify-center items-center gap-[1.5rem] Roboto mobile:hidden">
@@ -90,24 +102,38 @@ onUnmounted(() => {
         class="w-max text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">
         {{ $t('paidADList.more') }}</div>
     </div>
-    <div id="feature" class="flex justify-evenly px-[15%] my-[10rem] mobile:hidden">
-      <div class="flex flex-col justify-evenly items-center gap-[8rem]">
-        <div>
-          <div class="text-[40px] font-[700]">{{ $t('feature.Boost.title') }}</div>
-          <div class="text-[20px]" v-html="$t('feature.Boost.content')" />
+    <div id="feature">
+      <div class="flex justify-evenly px-[15%] my-[10rem] mobile:hidden">
+        <div class="flex flex-col justify-evenly items-center gap-[8rem]">
+          <div>
+            <div class="text-[40px] font-[700]">{{ $t('feature.Boost.title') }}</div>
+            <div class="text-[20px]" v-html="$t('feature.Boost.content')" />
+          </div>
+          <img class="h-[301px] object-contain rounded-[30px]" src="@/assets/img/light.png" alt="">
+          <div>
+            <div class="text-[40px] font-[700]">{{ $t('feature.More.title') }}</div>
+            <div class="text-[20px]" v-html="$t('feature.More.content')" />
+          </div>
         </div>
-        <img class="h-[301px] object-contain rounded-[30px]" src="@/assets/img/light.png" alt="">
-        <div>
-          <div class="text-[40px] font-[700]">{{ $t('feature.More.title') }}</div>
-          <div class="text-[20px]" v-html="$t('feature.More.content')" />
+        <div class="flex flex-col justify-evenly items-center gap-[8rem]">
+          <div class="text-[64px]" v-html="$t('feature.subTag')" />
+          <div>
+            <div class="text-[40px] font-[700]">{{ $t('feature.Pay.title') }}</div>
+            <div class="text-[20px]" v-html="$t('feature.Pay.content')" />
+          </div>
         </div>
       </div>
-      <div class="flex flex-col justify-evenly items-center gap-[8rem]">
-        <div class="text-[64px]" v-html="$t('feature.subTag')" />
-        <div>
-          <div class="text-[40px] font-[700]">{{ $t('feature.Pay.title') }}</div>
-          <div class="text-[20px]" v-html="$t('feature.Pay.content')" />
+      <div class="hidden mobile:flex flex-col px-[10%] my-[6rem]">
+        <div class="text-[24px] Roboto text-center" v-html="$t('feature.mobile.title')" />
+        <div class="flex flex-wrap">
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.paid')" />
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Website')" />
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.SMS')" />
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Local')" />
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Social')" />
+          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Graphic')" />
         </div>
+        <div class="flex justify-center mt-[1.5rem] bg-[#DF6E00] text-white text-[18px] py-[0.5rem] rounded-lg">{{ $t('feature.mobile.button') }}</div>
       </div>
     </div>
     <div id="solutions"
@@ -170,9 +196,12 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-[2rem] justify-center items-center">
+    <div class="hidden mobile:flex flex-col gap-[2rem] justify-center items-center my-[3rem]">
       <div class="w-[80%] text-[20px]" v-html="$t('sendEmail.title')" />
-      <inputText class="w-[80%] !rounded-md" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+      <div class="w-[80%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-5">
+        <inputText class="w-[95%]" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+        <img class="w-[5%]" src="@/assets/img/arrowRight.svg" alt="">
+      </div>
     </div>
   </div>
 </template>

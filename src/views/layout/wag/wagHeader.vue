@@ -48,7 +48,7 @@ onMounted(() => {
           <img class="w-[85px] h-[40px] object-contain" src="@/assets/img/logo.svg" alt="logo">
         </div>
         <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden">
-          <NuxtLink v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+          <NuxtLink class="cursor-pointer" v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
         </div>
       </div>
       <div class="mobile:hidden">
