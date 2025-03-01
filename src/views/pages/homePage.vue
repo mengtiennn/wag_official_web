@@ -16,6 +16,7 @@ const cardData = [
   { title: 'cardTwo' },
   { title: 'cardThree' }
 ]
+const works = ['paid', 'web', 'sms', 'local', 'social', 'gp']
 
 onMounted(() => {
   interval = setInterval(() => {
@@ -124,13 +125,33 @@ onUnmounted(() => {
         <span class="Roboto text-[48px] font-[500] leading-[56.25px]">{{ $t('howWagWorks.title') }}</span>
         <span class="text-[#545F71] leading-[22px]">{{ $t('howWagWorks.subTitle') }}</span>
       </div>
-      <div class="flex gap-[60px] mt-[50px]">
-        <div v-for="(card, idx) in cardData" :key="idx+'card'" class="flex flex-col gap-[20px] items-center">
+      <div class="flex gap-[60px] mt-[50px] w-[85vw]">
+        <div v-for="(card, idx) in cardData" :key="idx+'card'"
+          class="flex flex-col gap-[20px] items-center w-[calc((100%/3)-40px)]">
           <span class="text-[96px] font-bold">{{ idx + 1 }}</span>
           <div class="border-[1px] border-[#D8D8D8] rounded-[26px]">
-            <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-[325px]">
-            <div class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-[325px] rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center" :class="{'px-[40px]': idx == 0}">
+            <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-full">
+            <div
+              class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-[325px] rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center"
+              :class="{'px-[40px]': idx == 0}">
               {{ $t(`howWagWorks.${card.title}`) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[5rem] w-[85vw] bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px]">
+        <div class="flex gap-[12rem]">
+          <div class="flex flex-col gap-[35px]">
+            <div class="text-[32px] leading-[43px] Roboto max-w-[384px]">Trust us to take care of your marketing
+              initiatives.</div>
+            <div
+              class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[12px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
+              {{ $t('howWagWorks.contentBtn') }}</div>
+          </div>
+          <div class="flex flex-col gap-[24px]">
+            <div v-for="x in works" :key="x" class="flex gap-[9px]">
+              <img :src="'mdi_star-circle.svg'.getImg()" alt="">
+              <span>{{ $t(`howWagWorks.${x}`) }}</span>
             </div>
           </div>
         </div>
