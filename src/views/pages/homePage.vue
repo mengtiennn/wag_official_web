@@ -71,7 +71,7 @@ onUnmounted(() => {
         <div class="flex">
           <div class="text-[48px] Roboto font-[500]">{{ $t('paidAD.content1') }}</div>
           <div
-            class="ml-[12px] font-[500] text-[48px] w-[190px] h-[80px] relative overflow-hidden inline-block text-[#DF6E00]">
+            class="ml-[12px] font-[500] text-[48px] w-[220px] h-[80px] relative overflow-hidden inline-block text-[#DF6E00]">
             <transition-group name="slide">
               <div v-for="(word, index) in [currentWord]" :key="word" class="inline-block absolute w-full text-left">
                 {{ word }}
@@ -176,8 +176,7 @@ onUnmounted(() => {
       <div class="mt-[5rem] w-[85vw] bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px]">
         <div class="flex gap-[12rem]">
           <div class="flex flex-col gap-[35px]">
-            <div class="text-[32px] leading-[43px] Roboto max-w-[384px]">Trust us to take care of your marketing
-              initiatives.</div>
+            <div class="text-[32px] leading-[43px] Roboto max-w-[384px]">{{ $t('howWagWorks.contentTitle') }}</div>
             <div
               class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[12px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
               {{ $t('howWagWorks.contentBtn') }}</div>

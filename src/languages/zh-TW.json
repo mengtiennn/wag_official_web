@@ -98,18 +98,18 @@
       "button": "立即免费谘询"
     },
     "howWagWorks": {
-      "title": "How WAG works",
-      "subTitle": "From strategy to success, we turn ideas into impactful results.",
-      "cardOne": "Outline, define, and budget your project.",
-      "cardTwo": "Meet your perfect team.",
-      "cardThree": "Ready to elevate your business.",
-      "contentTitle": "Trust us to take care of your marketing initiatives.",
-      "contentBtn": "FREE CONSULTATION",
-      "paid": "Paid Advertising",
-      "web": "Website Development",
-      "sms": "SMS + Email Marketing",
-      "local": "Local Business Markerting",
-      "social": "Social Media Management",
-      "gp": "Graphic Design"
+      "title": "一起加入我们，开启流量增长之旅",
+      "subTitle": "从策略到成功，我们将创意转化为卓越成果",
+      "cardOne": "清晰规划、定义并制定项目预算",
+      "cardTwo": "安排您的完美团队",
+      "cardThree": "流量倍增计划开始",
+      "contentTitle": "将营销交给我们， 让您的业务轻松腾飞",
+      "contentBtn": "立即免费谘询",
+      "paid": "广告投放",
+      "web": "网站设计开发",
+      "sms": "邮件&短信营销",
+      "local": "活动策划与地推",
+      "social": "社群平台运营管理",
+      "gp": "各式海报设计"
     }
 }
