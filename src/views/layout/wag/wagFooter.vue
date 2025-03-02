@@ -24,7 +24,7 @@ import { ref } from "vue";
           <div class="mb-[22px]">{{ $t('footer.contact.title') }}</div>
           <div class="flex flex-col gap-[11px]">
             <div>{{ $t('footer.contact.phone') }}</div>
-            <div>{{ $t('footer.contact.email') }}</div>
+            <!-- <div>{{ $t('footer.contact.email') }}</div> -->
           </div>
         </div>
         <div class="flex justify-center gap-4">
@@ -51,7 +51,7 @@ import { ref } from "vue";
       <div class="border-y-[2px] border-solid border-[#F7F7F7] py-[1rem] pl-10">{{ $t('footer.contact.title') }}</div>
       <div class="flex flex-col gap-[11px] my-3">
         <div class="pl-10">{{ $t('footer.contact.phone') }}</div>
-        <div class="pl-10">{{ $t('footer.contact.email') }}</div>
+        <div class="pl-10">contact@wag.marketing</div>
       </div>
     </div>
     <div class="flex justify-center gap-4 py-[2rem] bg-[#F0F0F0]">

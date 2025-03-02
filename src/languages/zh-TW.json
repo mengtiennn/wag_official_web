@@ -19,7 +19,8 @@
     "paidAD" : {
         "content": "我们助力您的业务成长，提供专业<span class='text-[#DF6E00]'>付费广告</span><hr>超过1000+商家信赖之选",
         "content1": "我们助力您的业务成长，提供专业",
-        "content2": "超过1000+商家信赖之选"
+        "content2": "超过1000+商家信赖之选",
+        "mbContent": "WAG提供一站式线上营销解决方案，助您轻松管理营销事务，精准触达周边用户，高效引流拓展市场。通过卓越的品牌塑造与口碑营销，助力商家提升客户满意度，实现100%好评！"
     },
     "paidADList": {
         "card1": {
@@ -52,7 +53,17 @@
             "title": "完全值得您信任的专属团队",
             "content": "24小时在线的客户经理<hr>免费谘询的各领域专家<hr>弹性的合作模式"
           },
-          "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today"
+          "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today",
+          "mobile": {
+            "title": "营收倍增工具<hr>市场制霸策略",
+            "paid": "广告投放",
+            "Website": "网站设计开发",
+            "SMS": "邮件&短信营销",
+            "Local": "活动策划与地推",
+            "Social": "社群平台运营管理",
+            "Graphic": "各式海报设计",
+            "button": "立即开始"
+          }
     },
     "Solutions": {
       "title": "为各行业提供专业解决方案",
@@ -78,7 +89,7 @@
       "contact": {
         "title": "联系我们",
         "phone": "+1 929-545-4470",
-        "email": "contact@wag.marketing"
+        "mail": "contact@wag.marketing"
       }
     },
     "banner": {
