@@ -166,7 +166,7 @@ onUnmounted(() => {
           <div class="border-[1px] border-[#D8D8D8] rounded-[26px]">
             <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-full">
             <div
-              class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-[325px] rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center"
+              class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center"
               :class="{'px-[40px]': idx == 0}">
               {{ $t(`howWagWorks.${card.title}`) }}
             </div>
