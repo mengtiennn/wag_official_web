@@ -192,7 +192,7 @@ onUnmounted(() => {
     </div>
 
     <div id="sendEmail" class="flex justify-center items-center my-[5rem] mobile:hidden">
-      <div class="flex items-center justify-evenly gap-[10rem] bg-white p-[5%] rounded-[8px]">
+      <div class="flex items-center justify-evenly gap-[5rem] bg-white p-[5%] rounded-[8px] w-[85vw]">
         <div class="text-[2rem]" v-html="$t('sendEmail.title')" />
         <div class="flex flex-col gap-[1.5rem]">
           <div class="font-[700] text-[18px]">{{ $t('sendEmail.email') }}</div>
