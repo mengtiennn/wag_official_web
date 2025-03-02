@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import inputText from 'primevue/inputtext'
 import { ref, onMounted, onUnmounted } from "vue";
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
+console.log(locale.value)
 const gimmickList = ref([
   'first', 'second', 'third', 'fourth', 'fifth'
 ])
@@ -8,6 +11,7 @@ const gimmickList = ref([
 const emailModel = ref('')
 
 const words = ['paid ads', 'website', 'design', 'traffic', 'growth']
+const words_tw = ['精准投放', '网站设计', '邮件营销', '流量提升', '业务增长']
 const currentIdx = ref(0)
 const currentWord = ref(words[currentIdx.value])
 let interval = null
@@ -21,7 +25,11 @@ const works = ['paid', 'web', 'sms', 'local', 'social', 'gp']
 onMounted(() => {
   interval = setInterval(() => {
     currentIdx.value = (currentIdx.value + 1) % words.length
-    currentWord.value = words[currentIdx.value]
+    if (locale.value === 'zh-TW') {
+      currentWord.value = words_tw[currentIdx.value]
+    } else {
+      currentWord.value = words[currentIdx.value]
+    }
   }, 2000)
 })
 onUnmounted(() => {
@@ -34,7 +42,7 @@ onUnmounted(() => {
     <div class="w-full flex justify-center">
       <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%]">
         <div class="flex flex-col w-1/2">
-          <div class="Roboto font-[500] text-[48px] leading-[56.25px] text-black max-w-[482px]">{{ $t('banner.title') }}
+          <div class="Roboto font-[500] text-[48px] leading-[56.25px] text-black max-w-[500px]">{{ $t('banner.title') }}
           </div>
           <div class="Roboto font-[400] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
           <div
