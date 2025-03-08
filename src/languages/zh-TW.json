@@ -74,6 +74,7 @@
         "title": "订阅我们的电子报，掌握最新营销洞察与趋势，助您领先市场！",
         "email": "Email",
         "placeholder": "输入您的邮箱",
+        "namePlaceholder": "输入您的姓名",
         "Subscribe": "立即订阅"
     },
     "footer": {

@@ -1,32 +1,32 @@
 <template>
-  <div class="h-full my-[10rem] flex flex-col justify-center items-center">
-    <div class="w-[60%]">
-      <div class="Roboto font-[500] text-[36px]">Grow Your Brand Online</div>
-      <div class="Roboto font-[500] text-[36px]">Start a Conversation with Us Today!</div>
+  <div class="h-full my-[8rem] flex flex-col justify-center items-center mobile:!mt-[2rem] mobile:!mb-0">
+    <div class="w-[60%] mobile:w-[90%]">
+      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">Grow Your Brand Online</div>
+      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">Start a Conversation with Us Today!</div>
     </div>
-    <div class="w-[60%] mt-[50px] flex flex-col">
-      <div class="flex gap-[32px]">
-        <div class="flex flex-col w-[50%]">
-          <div>First Name</div>
+    <div class="w-[60%] mt-[50px] flex flex-col gap-[2rem] mobile:w-[90%]">
+      <div class="flex gap-[32px] mobile:flex-col">
+        <div class="flex flex-col gap-2 w-[50%] mobile:w-full">
+          <div>First Name<span class="text-red-400">*</span></div>
           <InputText v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
         </div>
-        <div class="flex flex-col w-[50%]">
+        <div class="flex flex-col gap-2 w-[50%] mobile:w-full">
           <div>Last Name</div>
-          <InputText v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
+          <InputText v-model="tabledata.lastName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
         </div>
       </div>
-      <div class="flex flex-col">
-        <div>Phone</div>
-        <InputText v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
+      <div class="flex flex-col gap-2">
+        <div>Phone<span class="text-red-400">*</span></div>
+        <InputText v-model="tabledata.phone" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
       </div>
-      <div class="flex flex-col">
-        <div>Email</div>
-        <InputText v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
+      <div class="flex flex-col gap-2">
+        <div>Email<span class="text-red-400">*</span></div>
+        <InputText v-model="tabledata.email" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
       </div>
-      <div class="flex flex-col">
-        <div>Market to contact</div>
+      <div class="flex flex-col gap-2">
+        <div>Market to contact<span class="text-red-400">*</span></div>
         <Select
-         v-model="tabledata.firstName" 
+         v-model="tabledata.contact" 
          :options="markets" 
          optionLabel="name" 
          class="h-[40px] !border-[1px] !border-solid !border-[#252525]"
@@ -35,21 +35,46 @@
          pt:option="my-[5px]"
           />
       </div>
-      <div class="flex flex-col">
-        <div>Message</div>
-        <Textarea v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
+      <div class="flex flex-col gap-2">
+        <div>Message<span class="text-red-400">*</span></div>
+        <Textarea 
+        v-model="tabledata.message" 
+        class="h-[40px] !border-[1px] !border-solid !border-[#252525]" 
+        pt:root="!h-[236px]"
+        />
+      </div>
+    </div>
+    <Button
+    :disabled="!isFormValid"
+     pt:root="!bg-[#DF6E00] text-white w-[60%] text-center py-[1rem] mt-[39px] cursor-pointer Roboto font-[700] mobile:w-[90%]" >SEND</Button>
+    <div class="w-full bg-[#F0F0F0] hidden mobile:flex flex-col gap-[2rem] justify-center items-center mt-[3rem] py-[5rem]">
+      <div class="w-[90%] text-[20px]" v-html="$t('sendEmail.title')" />
+      <div class="w-[90%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-1">
+        <inputText class="w-[95%]" :modelValue="nameModel" :placeHolder="$t('sendEmail.placeholder')" />
+      </div>
+      <div class="w-[90%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-1">
+        <inputText class="w-[95%]" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+        <img class="w-[5%]" src="@/assets/img/arrowRight.svg" alt="">
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
+import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Select from 'primevue/select'
 import Textarea from 'primevue/textarea';
-import { ref } from "vue";
+import { computed, ref } from "vue";
 const tabledata = ref({
-  firstName: ''
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  contact: null,
+  message: ''
 })
+const emailModel = ref('')
+const nameModel = ref('')
 const markets = ref([
   { name: 'Alabama', value: 'Alabama' },
   { name: 'Alaska', value: 'Alaska' },
@@ -103,6 +128,15 @@ const markets = ref([
   { name: 'Wyoming', value: 'Wyoming' },
   { name: 'Others', value: 'Others' }
 ]);
+const isFormValid = computed(() => {
+  return (
+    tabledata.value.firstName.trim() !== '' &&
+    tabledata.value.phone.trim() !== '' &&
+    tabledata.value.email.trim() !== '' &&
+    tabledata.value.contact !== null &&
+    tabledata.value.message.trim() !== ''
+  )
+})
 </script>
 <style lang="scss" scoped>
 .Roboto {
