@@ -4,8 +4,8 @@ import en from '../languages/en-US.json'
 // console.log('messages', )
 const i18n = createI18n({
   legacy: false, // 要把 legacy 設為 false，才可以使用 Composition API
-  locale: 'zh-TW',
-  fallbackLocale: 'zh-TW',
+  locale: 'en-US',
+  fallbackLocale: 'en-US',
   globalInjection: true,
   missingWarn: false,
   fallbackWarn: false,

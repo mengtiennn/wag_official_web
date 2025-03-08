@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Select from 'primevue/select';
 import { Session } from '@/utils/sessionManagement'
 
 const router = useRouter()
+const route = useRoute()
 const { locale } = useI18n()
 
 const routerData = reactive([
@@ -41,17 +42,17 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class="Roboto flex bg-[#F9F7F4] pt-[22px] pl-[90px] pr-[90px] pb-[22px] justify-center items-center laptop:justify-center tablet:justify-center laptop:pt-[10px] laptop:pb-[10px] tablet:pt-[10px] tablet:pb-[10px] fixed top-0 left-0 z-50 w-full mobile:px-6">
+  <div class="Roboto flex bg-[#F5F5F5] pt-[22px] pl-[90px] pr-[90px] pb-[22px] justify-center items-center laptop:justify-center tablet:justify-center laptop:pt-[10px] laptop:pb-[10px] tablet:pt-[10px] tablet:pb-[10px] fixed top-0 left-0 z-50 w-full mobile:px-6">
     <div class="flex justify-between items-center w-full desktop:max-w-[1000px] tablet:justify-center">
       <div class="flex items-center gap-[8rem]">
         <div class="flex items-end cursor-pointer" @click="router.push('/')">
           <img class="w-[85px] h-[40px] object-contain" src="@/assets/img/logo.svg" alt="logo">
         </div>
         <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden">
-          <NuxtLink class="cursor-pointer" v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+          <NuxtLink class="cursor-pointer" :class="{ 'font-bold': route.path == link.link }" v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
         </div>
       </div>
-      <div class="mobile:hidden">
+      <div class="mobile:hidden border-[1px] border-[#000000] py-[4px] px-[8px] rounded-[4px]">
         <Select
           v-model="lang"
           :options="langList"

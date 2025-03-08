@@ -66,7 +66,7 @@ export default {
         ],
       },
       fontFamily: {
-        NotoSans: ["Noto Sans TC, Roboto"],
+        NotoSans: ["Roboto"],
       },
       colors: {
         Primary: "#205ED5",

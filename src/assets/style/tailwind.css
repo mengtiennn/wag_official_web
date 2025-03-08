@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "Noto Sans TC";
   src: url("@/assets/fonts/NotoSansTC-Bold.ttf");
   font-weight: 700;
-}
+} */
 
 /* @font-face {
   font-family: "Noto Sans TC";
@@ -20,7 +20,7 @@
   font-weight: 500;
 } */
 
-@font-face {
+/* @font-face {
   font-family: "Noto Sans TC";
   src: url("@/assets/fonts/NotoSansTC-Regular.ttf");
   font-weight: 400;
@@ -30,12 +30,12 @@
   font-family: "Roboto";
   src: url("@/assets/fonts/Roboto-Regular.ttf");
   font-weight: 400;
-}
+} */
 
 /* base層 */
 @layer base {
   :root {
-    @apply font-NotoSans;
+    /* @apply font-NotoSans; */
     --h1-size: 1.5rem;
     --h1-weight: 700;
     --h1-lineHeight: 3rem;

@@ -2,7 +2,7 @@
 import { ref } from "vue";
 </script>
 <template>
-  <div class="bg-[#f2f2f2] w-screen flex justify-center gap-[5rem] py-[5rem] Roboto mobile:hidden">
+  <div class="bg-[#F5F5F5] w-screen flex justify-center gap-[5rem] py-[5rem] Roboto mobile:hidden">
     <div class="flex flex-col gap-[6rem]">
       <img class="w-[166px] h-[76px] object-contain" src="@/assets/img/logo.svg" alt="logo">
       <div>{{ $t('footer.copyright') }}</div>

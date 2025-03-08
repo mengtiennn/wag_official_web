@@ -13,7 +13,7 @@ const emailModel = ref('')
 const words = ['paid ads', 'website', 'design', 'traffic', 'growth']
 const words_tw = ['精准投放', '网站设计', '邮件营销', '流量提升', '业务增长']
 const currentIdx = ref(0)
-const currentWord = ref(words[currentIdx.value])
+const currentWord = ref(locale.value === 'zh-TW' ? words_tw[currentIdx.value] : words[currentIdx.value])
 let interval = null
 const cardData = [
   { title: 'cardOne' },
@@ -37,7 +37,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-  <div class="bg-[#F9F7F4] Roboto">
+  <div class="bg-[#F5F5F5] Roboto">
     <!-- banner -->
     <div class="w-full flex justify-center">
       <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%]">
@@ -134,14 +134,27 @@ onUnmounted(() => {
       <div class="hidden mobile:flex flex-col px-[10%] my-[6rem]">
         <div class="text-[24px] Roboto text-center" v-html="$t('feature.mobile.title')" />
         <div class="flex flex-wrap">
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.paid')" />
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Website')" />
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.SMS')" />
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Local')" />
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Social')" />
-          <div class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]" v-html="$t('feature.mobile.Graphic')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.paid')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.Website')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.SMS')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.Local')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.Social')" />
+          <div
+            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            v-html="$t('feature.mobile.Graphic')" />
         </div>
-        <div class="flex justify-center mt-[1.5rem] bg-[#DF6E00] text-white text-[18px] py-[0.5rem] rounded-lg">{{ $t('feature.mobile.button') }}</div>
+        <div class="flex justify-center mt-[1.5rem] bg-[#DF6E00] text-white text-[18px] py-[0.5rem] rounded-lg">{{
+          $t('feature.mobile.button') }}</div>
       </div>
     </div>
     <div id="solutions"
@@ -173,7 +186,8 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-      <div class="mt-[5rem] w-[85vw] bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px]">
+      <div
+        class="mt-[5rem] w-[85vw] bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px]">
         <div class="flex gap-[12rem]">
           <div class="flex flex-col gap-[35px]">
             <div class="text-[32px] leading-[43px] Roboto max-w-[384px]">{{ $t('howWagWorks.contentTitle') }}</div>
