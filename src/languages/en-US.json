@@ -16,6 +16,13 @@
     "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><br/>Ads Implemented",
     "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><br/>Daily Order Volume"
   },
+  "GimmickM": {
+    "first": "<span class='text-[#545F71] font-[700] text-[13px]'>8+</span>Years of Experience",
+    "second": "<span class='text-[#545F71] font-[700] text-[13px]'>1027+</span>Clients Served",
+    "third": "<span class='text-[#545F71] font-[700] text-[13px]'>250+</span>New Customers Reach",
+    "fourth": "<span class='text-[#545F71] font-[700] text-[13px]'>395+</span>Ads Implemented",
+    "fifth": "<span class='text-[#545F71] font-[700] text-[13px]'>10+</span>Daily Order Volume"
+  },
   "paidAD" : {
     "content": "We're here to help your business with <span class='text-[#DF6E00]'>paid ads</span>.<br/> Trusted by over 500 businesses.",
     "content1": "We're here to help your business with",
@@ -96,7 +103,8 @@
   "banner": {
     "title": "With WAG, everything is within reach.",
     "content": "With powerful marketing strategies and massive traffic boosts, your business will thrive with nonstop orders and endless opportunities. Join us to skyrocket your brand, maximize exposure, and drive unbeatable conversions!",
-    "button": "FREE CONSULTATION"
+    "button": "FREE CONSULTATION",
+    "contentM": "Join us to skyrocket your brand, maximize exposure, and drive unbeatable conversions!"
   },
   "howWagWorks": {
     "title": "How WAG works",
@@ -111,6 +119,15 @@
     "sms": "SMS + Email Marketing",
     "local": "Local Business Markerting",
     "social": "Social Media Management",
-    "gp": "Graphic Design"
+    "gp": "Graphic Design",
+    "titleM": "Our Commitment to Your Success",
+    "paidM": "Expert Marketing Specialists",
+    "webM": "Data-Driven Success",
+    "smsM": "Customized Strategies",
+    "localM": "Dedicated Support & Optimization"
+  },
+  "HowCard": {
+    "title": "How We Make It Happen",
+    "button": "See Case Studies"
   }
 }

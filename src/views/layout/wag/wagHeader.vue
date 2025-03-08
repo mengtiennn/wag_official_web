@@ -52,7 +52,7 @@ onMounted(() => {
           <router-link class="cursor-pointer whitespace-nowrap" :class="{ 'font-bold': route.path == link.link }" v-for="(link, idx) in routerData" :key="idx" :to="link.link">{{ $t(`Header.${link.label}`) }}</router-link>
         </div>
       </div>
-      <div class="upderMac:hidden flex gap-[3rem]">
+      <div class="underMac:hidden flex gap-[3rem]">
         <div class="bg-[#DF6E00] px-[10px] py-[12px] font-bold text-[15px] rounded-[8px] text-white">
           {{ $t('banner.button') }}
         </div>

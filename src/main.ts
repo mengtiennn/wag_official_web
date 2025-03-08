@@ -16,11 +16,15 @@ import '@/utils/stringExtension'
 import { ColorTheme } from '@/Theme/ColorTheme.ts'
 const crmPreset = definePreset(Lara, new ColorTheme().uiLibraryColor)
 
+import VueSplide from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
+
 //app.use
 const app = createApp(App);
 app.use(createPinia().use(piniaPluginPersistedstate));
 app.use(router);
 app.use(i18n);
+app.use(VueSplide);
 app.use(PrimeVue, {
     locale: localeTW,
     theme: {

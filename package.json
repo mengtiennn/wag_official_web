@@ -23,6 +23,7 @@
     "@intlify/unplugin-vue-i18n": "^6.0.1",
     "@primevue/auto-import-resolver": "^4.3.1",
     "@primevue/themes": "^4.0.4",
+    "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.6.7",
     "date-fns": "^4.1.0",
     "echarts": "^5.5.1",
