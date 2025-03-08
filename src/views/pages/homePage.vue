@@ -42,9 +42,9 @@ onUnmounted(() => {
     <div class="w-full flex justify-center">
       <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%]">
         <div class="flex flex-col w-1/2">
-          <div class="Roboto font-[500] text-[48px] leading-[56.25px] text-black max-w-[500px]">{{ $t('banner.title') }}
+          <div class="Roboto font-[500] text-[48px] text-black max-w-[500px] leading-relaxed tracking-[4%]">{{ $t('banner.title') }}
           </div>
-          <div class="Roboto font-[400] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
+          <div class="Roboto font-[300] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
           <div
             class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
             {{ $t('banner.button') }}</div>
@@ -58,13 +58,12 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- 數值區 -->
     <div id="gimmick" class="flex justify-evenly py-[2.5rem] mobile:overflow-auto mobile:flex-wrap">
       <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[50%]"
         v-html="$t(`Gimmick.${item}`)" />
     </div>
-    <!-- <div id="gimmick" class="flex flex-wrap justify-evenly py-[2.5rem] mobile:overflow-auto">
-      <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[40%] m-[5%]" v-html="$t(`Gimmick.${item}`)" />
-    </div> -->
+    
     <!-- 文字特效區塊 -->
     <div class="w-full flex justify-center my-[5rem]">
       <div id="paidAD" class="flex flex-col w-[80vw] items-center">
@@ -79,27 +78,26 @@ onUnmounted(() => {
             </transition-group>
           </div>
         </div>
-        <div class=" text-[48px] Roboto font-[500]">{{ $t('paidAD.content2') }}</div>
+        <div class=" text-[48px] Roboto font-[500] mt-[-18px]">{{ $t('paidAD.content2') }}</div>
       </div>
     </div>
 
+    <!-- mobile -->
     <div id="paidAD">
       <div class="hidden mobile:flex mobile:flex-col px-[10%] gap-[2.5rem]">
         <div class="text-[20px]" v-html="$t('paidAD.mbContent')" />
         <img class="rounded-[2rem]" src="@/assets/img/light.png" alt="">
       </div>
-      <!-- <div class="h-[150px] flex justify-center items-center Roboto my-[2.5rem] mobile:hidden">
-        <div class="text-[40px]" v-html="$t('paidAD.content')" />
-      </div> -->
     </div>
 
-    <div id="paidADCardList" class="flex flex-col justify-center items-center gap-[1.5rem] Roboto mobile:hidden">
+    <!-- 中間卡片區 desktop -->
+    <div id="paidADCardList" class="flex flex-col justify-center items-center gap-[5rem] Roboto mobile:hidden">
       <div class="flex justify-evenly w-[80%] gap-[1.5rem]">
-        <div v-for="(item) in 3" :key="item" class="bg-[#F0F0F0] pt-[30px] px-[25px] rounded-[8px]">
+        <div v-for="(item) in 3" :key="item" class="bg-[#F5F5F5] border-[1px] border-[#DF6E00] pt-[30px] px-[25px] rounded-[8px]">
           <img src="@/assets/img/light.png" alt="" class="rounded-[8px] object-contain">
           <div class="my-[1rem] flex flex-col gap-[14px]">
             <div
-              class="w-max text-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
+              class="w-max text-white bg-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
               {{ $t(`paidADList.card${item}.tag`) }}</div>
             <div>{{ $t(`paidADList.card${item}.content`) }}</div>
             <div class="font-[600]">{{ $t(`paidADList.card${item}.title`) }}</div>
@@ -107,7 +105,7 @@ onUnmounted(() => {
         </div>
       </div>
       <div
-        class="w-max text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">
+        class="w-max text-white bg-[#DF6E00] border-[#DF6E00] text-[18px] border-[1px] border-solid px-[79px] py-[20px] rounded-[8px] cursor-pointer">
         {{ $t('paidADList.more') }}</div>
     </div>
     <div id="feature">

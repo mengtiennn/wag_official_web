@@ -413,6 +413,11 @@ export class ColorTheme {
                     headerCell: {
                         background: 'var(--ev-bg-level4)'
                     }
+                },
+                select: {
+                    padding: {
+                        y: '6px'
+                    }
                 }
             }
         }

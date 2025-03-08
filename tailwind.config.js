@@ -119,8 +119,9 @@ export default {
         miniMobile: { max: "320px" },
         mobile: { max: "600px" },
         miniPad: { max: "768px" },
-        laptop: { min: "601px", max: "999px" },
-        desktop: { min: "1000px" },
+        upderMac: { max: "1144px" },
+        laptop: { min: "601px", max: "1144px" },
+        desktop: { min: "1145px" },
       },
       padding: {
         iconBtn: "8px 12px 8px 8px",

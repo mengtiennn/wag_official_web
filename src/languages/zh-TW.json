@@ -10,14 +10,14 @@
         "contact": "联系我们"
     },
     "Gimmick": {
-        "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><hr>多年經驗",
-        "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><hr>服務客戶數",
-        "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><hr>新客觸達",
-        "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><hr>投放廣告數",
-        "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><hr>日均訂單量"
+        "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><br/>多年經驗",
+        "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><br/>服務客戶數",
+        "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><br/>新客觸達",
+        "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><br/>投放廣告數",
+        "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><br/>日均訂單量"
     },
     "paidAD" : {
-        "content": "我们助力您的业务成长，提供专业<span class='text-[#DF6E00]'>付费广告</span><hr>超过1000+商家信赖之选",
+        "content": "我们助力您的业务成长，提供专业<span class='text-[#DF6E00]'>付费广告</span><br/>超过1000+商家信赖之选",
         "content1": "我们助力您的业务成长，提供专业",
         "content2": "超过1000+商家信赖之选",
         "mbContent": "WAG提供一站式线上营销解决方案，助您轻松管理营销事务，精准触达周边用户，高效引流拓展市场。通过卓越的品牌塑造与口碑营销，助力商家提升客户满意度，实现100%好评！"
@@ -43,19 +43,19 @@
     "feature": {
         "Boost": {
             "title": "实现可持续性的营收增长",
-            "content": "专业分析后的精准营销策略<hr>灵活的服务项目搭配<hr>增加行业竞争优势"
+            "content": "专业分析后的精准营销策略<br/>灵活的服务项目搭配<br/>增加行业竞争优势"
           },
           "More": {
             "title": "减少大量时间与花费成本",
-            "content": "整合多领域专家团队<hr>总结多年经验减少试错成本<hr>导入AI科技的行销工具"
+            "content": "整合多领域专家团队<br/>总结多年经验减少试错成本<br/>导入AI科技的行销工具"
           },
           "Pay": {
             "title": "完全值得您信任的专属团队",
-            "content": "24小时在线的客户经理<hr>免费谘询的各领域专家<hr>弹性的合作模式"
+            "content": "24小时在线的客户经理<br/>免费谘询的各领域专家<br/>弹性的合作模式"
           },
-          "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<hr> with <span class='text-[#DF6E00]'>WAG</span> today",
+          "subTag": "<span class='text-[#DF6E00]'>Grow</span> better<br/> with <span class='text-[#DF6E00]'>WAG</span> today",
           "mobile": {
-            "title": "营收倍增工具<hr>市场制霸策略",
+            "title": "营收倍增工具<br/>市场制霸策略",
             "paid": "广告投放",
             "Website": "网站设计开发",
             "SMS": "邮件&短信营销",
