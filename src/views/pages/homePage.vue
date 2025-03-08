@@ -112,20 +112,20 @@ onUnmounted(() => {
       <div class="flex justify-evenly px-[15%] my-[10rem] mobile:hidden">
         <div class="flex flex-col justify-evenly items-center gap-[8rem]">
           <div>
-            <div class="text-[40px] font-[700]">{{ $t('feature.Boost.title') }}</div>
-            <div class="text-[20px]" v-html="$t('feature.Boost.content')" />
+            <div class="text-[32px] font-[700]">{{ $t('feature.Boost.title') }}</div>
+            <div class="text-[#545F71]" v-html="$t('feature.Boost.content')" />
           </div>
           <img class="h-[301px] object-contain rounded-[30px]" src="@/assets/img/light.png" alt="">
           <div>
-            <div class="text-[40px] font-[700]">{{ $t('feature.More.title') }}</div>
-            <div class="text-[20px]" v-html="$t('feature.More.content')" />
+            <div class="text-[32px] font-[700]">{{ $t('feature.More.title') }}</div>
+            <div class="text-[#545F71]" v-html="$t('feature.More.content')" />
           </div>
         </div>
         <div class="flex flex-col justify-evenly items-center gap-[8rem]">
-          <div class="text-[64px]" v-html="$t('feature.subTag')" />
+          <div class="text-[48px]" v-html="$t('feature.subTag')" />
           <div>
-            <div class="text-[40px] font-[700]">{{ $t('feature.Pay.title') }}</div>
-            <div class="text-[20px]" v-html="$t('feature.Pay.content')" />
+            <div class="text-[32px] font-[700]">{{ $t('feature.Pay.title') }}</div>
+            <div class="text-[#545F71]" v-html="$t('feature.Pay.content')" />
           </div>
         </div>
       </div>
@@ -157,8 +157,8 @@ onUnmounted(() => {
     </div>
     <div id="solutions"
       class="bg-[#F0F0F0] w-full h-[312px] flex flex-col justify-center items-center gap-[1.5rem] Roboto my-[2.5rem] mobile:hidden">
-      <div class="text-[#DF6E00] text-[40px] font-bold">{{ $t('Solutions.title') }}</div>
-      <div class="w-[50%] text-center">{{ $t('Solutions.content') }}</div>
+      <div class="text-[#DF6E00] text-[36px] font-bold">{{ $t('Solutions.title') }}</div>
+      <div class="w-[50%] text-center text-#545F71">{{ $t('Solutions.content') }}</div>
       <div
         class="text-[#DF6E00] border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer">
         {{ $t('Solutions.button') }}</div>
@@ -167,17 +167,17 @@ onUnmounted(() => {
     <!-- How WAG works -->
     <div class="w-full items-center flex flex-col mt-[10rem]">
       <div class="flex flex-col items-center gap-[12px]">
-        <span class="Roboto text-[48px] font-[500] leading-[56.25px]">{{ $t('howWagWorks.title') }}</span>
+        <span class="Roboto text-[36px] font-[500] leading-[56.25px]">{{ $t('howWagWorks.title') }}</span>
         <span class="text-[#545F71] leading-[22px]">{{ $t('howWagWorks.subTitle') }}</span>
       </div>
-      <div class="flex gap-[60px] mt-[50px] w-[85vw]">
+      <div class="flex gap-[60px] mt-[50px] w-[85vw] justify-between">
         <div v-for="(card, idx) in cardData" :key="idx+'card'"
-          class="flex flex-col gap-[20px] items-center w-[calc((100%/3)-40px)]">
-          <span class="text-[96px] font-bold">{{ idx + 1 }}</span>
+          class="flex flex-col gap-[20px] items-center w-[18.5rem]">
+          <span class="text-[36px] font-bold">{{ idx + 1 }}</span>
           <div class="border-[1px] border-[#D8D8D8] rounded-[26px]">
             <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-full">
             <div
-              class="bg-white py-[30px] h-[125px] text-center text-[24px] font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center"
+              class="bg-white py-[30px] h-[125px] text-center font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center"
               :class="{'px-[40px]': idx == 0}">
               {{ $t(`howWagWorks.${card.title}`) }}
             </div>
@@ -186,11 +186,11 @@ onUnmounted(() => {
       </div>
       <div
         class="mt-[5rem] w-[85vw] bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px]">
-        <div class="flex gap-[12rem]">
-          <div class="flex flex-col gap-[35px]">
+        <div class="flex gap-[12rem] items-center">
+          <div class="flex flex-col gap-[20px]">
             <div class="text-[32px] leading-[43px] Roboto max-w-[384px]">{{ $t('howWagWorks.contentTitle') }}</div>
             <div
-              class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[12px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
+              class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[12px] px-[24px] w-fit rounded-[8px] text-white text-[18px] cursor-pointer max-w-[463px]">
               {{ $t('howWagWorks.contentBtn') }}</div>
           </div>
           <div class="flex flex-col gap-[24px]">
@@ -205,12 +205,14 @@ onUnmounted(() => {
 
     <div id="sendEmail" class="flex justify-center items-center my-[5rem] mobile:hidden">
       <div class="flex items-center justify-evenly gap-[5rem] bg-white p-[5%] rounded-[8px] w-[85vw]">
-        <div class="text-[2rem]" v-html="$t('sendEmail.title')" />
+        <div class="text-[24px]" v-html="$t('sendEmail.title')" />
         <div class="flex flex-col gap-[1.5rem]">
           <div class="font-[700] text-[18px]">{{ $t('sendEmail.email') }}</div>
-          <inputText class="w-[500px] !border-[1px] !border-solid !border-[#D8D8D8] !p-2 !rounded-md"
-            :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
-          <div class="bg-[#DF6E00] text-white rounded-lg w-max px-[24px] py-[12px]">{{ $t('sendEmail.Subscribe') }}
+          <div class="flex relative">
+            <inputText class="w-[500px] !border-[1px] !border-solid !border-[#D8D8D8] !p-2 !rounded-tl-md !rounded-bl-md h-[48px]"
+              :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+            <div class="bg-[#DF6E00] text-white rounded-lg w-max px-[24px] py-[12px] absolute right-0 top-0 cursor-pointer">{{ $t('sendEmail.Subscribe') }}
+          </div>
           </div>
         </div>
       </div>

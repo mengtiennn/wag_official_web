@@ -73,7 +73,7 @@
   "sendEmail": {
     "title": "Stay ahead with marketing insights<br/> and trends from our newsletter!",
     "email": "Email",
-    "placeholder": "Enter your email",
+    "placeholder": "Enter your email address",
     "namePlaceholder": "Enter your name",
     "Subscribe": "Subscribe"
   },
