@@ -52,14 +52,13 @@ onMounted(() => {
           <router-link class="cursor-pointer" :class="{ 'font-bold': route.path == link.link }" v-for="(link, idx) in routerData" :key="idx" :to="link.link">{{ $t(`Header.${link.label}`) }}</router-link>
         </div>
       </div>
-      <div class="mobile:hidden border-[1px] border-[#000000] py-[4px] px-[8px] rounded-[4px]">
+      <div class="mobile:hidden">
         <Select
           v-model="lang"
           :options="langList"
           optionLabel="label"
           optionValue="value"
           @change="handleLanguageChange"
-          class="w-[3.5rem]"
         />
       </div>
     </div>

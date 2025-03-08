@@ -7,10 +7,15 @@ import PrimeVue from 'primevue/config';
 import '@/assets/style/tailwind.css';
 import Lara from '@primevue/themes/lara';
 import Aura from '@primevue/themes/aura';
+import { definePreset } from '@primevue/themes'
 import App from './App.vue'
 import { localeTW } from '@/languages/primeVue-zhTW.ts'
 import '@/utils/arrayExtension'
 import '@/utils/stringExtension'
+
+import { ColorTheme } from '@/Theme/ColorTheme.ts'
+const crmPreset = definePreset(Lara, new ColorTheme().uiLibraryColor)
+
 //app.use
 const app = createApp(App);
 app.use(createPinia().use(piniaPluginPersistedstate));
@@ -19,7 +24,7 @@ app.use(i18n);
 app.use(PrimeVue, {
     locale: localeTW,
     theme: {
-        preset: Lara,
+        preset: crmPreset,
         cssLayer: {
             name: 'primevue',
             order: 'tailwind-base, primevue, tailwind-utilities'
