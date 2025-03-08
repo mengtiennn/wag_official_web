@@ -49,7 +49,7 @@ onMounted(() => {
           <img class="w-[85px] h-[40px] object-contain" src="@/assets/img/logo.svg" alt="logo">
         </div>
         <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden">
-          <NuxtLink class="cursor-pointer" :class="{ 'font-bold': route.path == link.link }" v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+          <router-link class="cursor-pointer" :class="{ 'font-bold': route.path == link.link }" v-for="(link, idx) in routerData" :key="idx" :to="link.link">{{ $t(`Header.${link.label}`) }}</router-link>
         </div>
       </div>
       <div class="mobile:hidden border-[1px] border-[#000000] py-[4px] px-[8px] rounded-[4px]">
@@ -69,7 +69,7 @@ onMounted(() => {
     <div class="w-full h-full fixed top-0 left-0 bg-white z-50 flex items-center pt-[75px] flex-col" v-if="showHamburger">
       <img src="@/assets/img/close.svg" class="fixed top-[16px] right-4 cursor-pointer desktop:hidden" @click="showHamburger = false">
       <div class="flex gap-[24px] text-text-black flex-col items-center">
-        <NuxtLink v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</NuxtLink>
+        <router-link v-for="(link, idx) in routerData" :key="idx + 'router'" :to="link.link">{{ $t(`Header.${link.label}`) }}</router-link>
       </div>
     </div>
   </Transition>

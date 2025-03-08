@@ -27,14 +27,12 @@ class RouterService {
         const pages = Object.keys(routeModules)
             .filter(x => self._ignoreFile.includes(x) == false)
             .map(pathTemp => {
-
                 const name = this.getLastFileName(pathTemp);
                 return {
                     path: `/${name}`,
                     name: name,
                     meta: { layout: wagLayout },
                     component: routeModules[pathTemp],
-
                 }
             });
         return pages;
@@ -50,9 +48,7 @@ class RouterService {
                 component: () => import('@/views/pages/homePage.vue')
             },
             ...path,
-
         ];
-
         return routes;
     }
 }
