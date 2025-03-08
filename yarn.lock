@@ -324,6 +324,13 @@
   resolved "https://registry.npmjs.org/@primeuix/utils/-/utils-0.5.1.tgz"
   integrity sha512-/bYirtF3gJOGrRQfQ5tUyQOLEria7wg/UCqvpIydTAxLmj/UWgWwh2kAjYVp49eldm1+2sk4+TDkbAz8XcPpew==
 
+"@primevue/auto-import-resolver@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/@primevue/auto-import-resolver/-/auto-import-resolver-4.3.1.tgz"
+  integrity sha512-Z3NSbREk/ZfhLwwCWAq9w7HMFyelfIqX7kGdV0/9YL8pHtB4G18dot5avG0alHWEjHkDPr2lkt3hai9+HduIDw==
+  dependencies:
+    "@primevue/metadata" "4.3.1"
+
 "@primevue/core@4.3.1":
   version "4.3.1"
   resolved "https://registry.npmjs.org/@primevue/core/-/core-4.3.1.tgz"
@@ -339,6 +346,11 @@
   dependencies:
     "@primeuix/utils" "^0.5.1"
     "@primevue/core" "4.3.1"
+
+"@primevue/metadata@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/@primevue/metadata/-/metadata-4.3.1.tgz"
+  integrity sha512-AOnbzzYr0Y7w7M1jTypNQQyDtEbrzjCmjnFf8tQ72fAHpTU2+W7O7aw0oO17VCh5TLyZkCftwWG9N6SfCv3o+Q==
 
 "@primevue/themes@^4.0.4":
   version "4.3.1"
@@ -2051,7 +2063,7 @@ primeicons@^7.0.0:
   resolved "https://registry.npmjs.org/primeicons/-/primeicons-7.0.0.tgz"
   integrity sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==
 
-primevue@^4.0.4:
+primevue@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npmjs.org/primevue/-/primevue-4.3.1.tgz"
   integrity sha512-NSUpcWf2WpXgqOvjgXu5zQM3E5UEXoA2iXLi6xV+h1SBZ1TmgNfrjme96KRzfUY2RBsI0rTSUuPv0I+fXvtcmA==
