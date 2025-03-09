@@ -1,30 +1,30 @@
 <template>
   <div class="h-full my-[8rem] flex flex-col justify-center items-center mobile:!mt-[2rem] mobile:!mb-0">
     <div class="w-[60%] mobile:w-[90%]">
-      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">Grow Your Brand Online</div>
-      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">Start a Conversation with Us Today!</div>
+      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">{{ $t('Contact.title') }}</div>
+      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">{{ $t('Contact.subTitle') }}</div>
     </div>
     <div class="w-[60%] mt-[50px] flex flex-col gap-[2rem] mobile:w-[90%]">
       <div class="flex gap-[32px] mobile:flex-col">
         <div class="flex flex-col gap-2 w-[50%] mobile:w-full">
-          <div>First Name<span class="text-red-400">*</span></div>
+          <div>{{ $t('Contact.firstName') }}<span class="text-red-400">*</span></div>
           <InputText v-model="tabledata.firstName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
         </div>
         <div class="flex flex-col gap-2 w-[50%] mobile:w-full">
-          <div>Last Name</div>
+          <div>{{ $t('Contact.lastName') }}</div>
           <InputText v-model="tabledata.lastName" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <div>Phone<span class="text-red-400">*</span></div>
+        <div>{{ $t('Contact.phone') }}<span class="text-red-400">*</span></div>
         <InputText v-model="tabledata.phone" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
       </div>
       <div class="flex flex-col gap-2">
-        <div>Email<span class="text-red-400">*</span></div>
+        <div>{{ $t('Contact.email') }}<span class="text-red-400">*</span></div>
         <InputText v-model="tabledata.email" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
       </div>
       <div class="flex flex-col gap-2">
-        <div>Market to contact<span class="text-red-400">*</span></div>
+        <div>{{ $t('Contact.marketToContact') }}<span class="text-red-400">*</span></div>
         <Select
          v-model="tabledata.contact" 
          :options="markets" 
@@ -36,7 +36,7 @@
           />
       </div>
       <div class="flex flex-col gap-2">
-        <div>Message<span class="text-red-400">*</span></div>
+        <div>{{ $t('Contact.message') }}<span class="text-red-400">*</span></div>
         <Textarea 
         v-model="tabledata.message" 
         class="h-[40px] !border-[1px] !border-solid !border-[#252525]" 

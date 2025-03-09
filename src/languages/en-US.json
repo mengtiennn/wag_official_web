@@ -129,5 +129,16 @@
   "HowCard": {
     "title": "How We Make It Happen",
     "button": "See Case Studies"
+  },
+  "Contact": {
+    "title": "Grow Your Brand Online",
+    "subTitle": "Start a Conversation with Us Today!",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "marketToContact": "Market to contact",
+    "message": "Message",
+    "send": "SEND"
   }
 }
