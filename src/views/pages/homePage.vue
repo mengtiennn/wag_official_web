@@ -37,11 +37,12 @@ onUnmounted(() => {
 })
 
 const splideOption = {
+  width: '99vw',
   rewind: true,
   perPage: 3,
   arrows: false,
   omitEnd: true,
-  padding: { left: 0, right: '10%' },
+  padding: { left: '5%', right: '10%' },
   pagination: false,
   gap: '20px',
   breakpoints: {
@@ -268,7 +269,7 @@ const splideOption = {
     <div class="hidden miniPad:flex flex-col w-full items-center mt-[50px]">
       <div class="w-[85vw] flex flex-col items-center">
         <span class="text-[24px] font-[400] Roboto">{{ $t('HowCard.title') }}</span>
-        <Splide :options="{ rewind: true, arrows: false }" aria-label="My Favorite Images">
+        <Splide :options="{ rewind: true, arrows: false, width: '90vw' }" aria-label="My Favorite Images">
           <SplideSlide v-for="item in 3" :key="item">
             <div class="flex justify-center mt-[25px]">
               <div class="flex justify-evenly w-[80%] gap-[1.5rem] mb-[50px]">
