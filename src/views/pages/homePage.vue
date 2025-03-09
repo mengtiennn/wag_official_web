@@ -61,7 +61,7 @@ const splideOption = {
   <div class="bg-[#F5F5F5] Roboto">
     <!-- banner -->
     <div class="w-full flex justify-center underMac:hidden">
-      <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%]">
+      <div class="flex gap-[191px] pt-[6rem] items-center pb-[7rem] w-[75%] justify-center">
         <div class="flex flex-col w-1/2">
           <div class="Roboto font-[500] text-[48px] text-black max-w-[500px] leading-relaxed tracking-[4%]">{{
             $t('banner.title') }}
@@ -216,7 +216,7 @@ const splideOption = {
       <div class="flex flex-col items-center gap-[12px] underMac:gap-[8px]">
         <span class="Roboto text-[36px] font-[500] leading-[56.25px] underMac:text-[24px] underMac:leading-[30px]">{{
           $t('howWagWorks.title') }}</span>
-        <span class="text-[#545F71] leading-[22px] w-[80vw] underMac:text-center underMac:text-[14px]">{{
+        <span class="text-[#545F71] leading-[22px] w-[80vw] underMac:text-center underMac:text-[14px] text-center">{{
           $t('howWagWorks.subTitle') }}</span>
       </div>
       <div

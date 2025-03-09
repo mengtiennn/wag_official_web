@@ -122,5 +122,16 @@
     "HowCard": {
       "title": "我们助力您的业务成长，超过1000+商家信赖之选",
       "button": "更多成功案例"
+    },
+    "Contact": {
+      "title": "填写简单表单",
+      "subTitle": "即刻获得免费谘询！",
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "phone": "电话",
+      "email": "邮箱",
+      "marketToContact": "市场合作联系",
+      "message": "请留下您的需求",
+      "send": "SEND"
     }
 }
