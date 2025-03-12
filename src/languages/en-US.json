@@ -50,11 +50,11 @@
   "feature": {
     "Boost": {
       "title": "Boost Your Brand with Us!",
-      "content": "Turning Visitors into Profits!<br/> We make sure they convert into loyal customers,<br/> driving your sales to new heights."
+      "content": "Turning Visitors into Profits! We make sure they convert into loyal<br> customers, driving your sales to new heights."
     },
     "More": {
       "title": "More Than a One-Time Sale",
-      "content": "We help you build lasting relationships, turning<br/> customers into repeat buyers and maximizing<br/> revenue over the long term."
+      "content": "We help you build lasting relationships, turning customers into<br> repeat buyers and maximizing revenue over the long term."
     },
     "Pay": {
       "title": "Pay Less, Gain More",
@@ -98,12 +98,17 @@
       "title": "Contact us",
       "phone": "+1 929-545-4470",
       "mail": "contact@wag.marketing"
+    },
+    "Contact": {
+      "title": "Contact",
+      "name": "Name",
+      "email": "Email Address"
     }
   },
   "banner": {
     "title": "With WAG, everything is within reach.",
     "content": "With powerful marketing strategies and massive traffic boosts, your business will thrive with nonstop orders and endless opportunities. Join us to skyrocket your brand, maximize exposure, and drive unbeatable conversions!",
-    "button": "FREE CONSULTATION",
+    "button": "Free Consultation",
     "contentM": "Join us to skyrocket your brand, maximize exposure, and drive unbeatable conversions!"
   },
   "howWagWorks": {
@@ -113,7 +118,7 @@
     "cardTwo": "Meet your perfect team.",
     "cardThree": "Ready to elevate your business.",
     "contentTitle": "Trust us to take care of your marketing initiatives.",
-    "contentBtn": "FREE CONSULTATION",
+    "contentBtn": "Free Consultation",
     "paid": "Paid Advertising",
     "web": "Website Development",
     "sms": "SMS + Email Marketing",
@@ -132,7 +137,7 @@
   },
   "Contact": {
     "title": "Grow Your Brand Online",
-    "subTitle": "Start a Conversation with Us Today!",
+    "subTitle": "Start a Conversation with Us Today!<br><span class='text-[#DF6E00] text-[20px] font-[400]'>Fill out the form now to get a free consultation!</span>",
     "firstName": "First Name",
     "lastName": "Last Name",
     "phone": "Phone",

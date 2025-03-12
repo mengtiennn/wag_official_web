@@ -91,6 +91,11 @@
         "title": "联系我们",
         "phone": "+1 929-545-4470",
         "mail": "contact@wag.marketing"
+      },
+      "Contact": {
+        "title": "Contact",
+        "name": "姓名",
+        "email": "邮箱"
       }
     },
     "banner": {
@@ -105,7 +110,7 @@
       "cardOne": "清晰规划、定义并制定项目预算",
       "cardTwo": "安排您的完美团队",
       "cardThree": "流量倍增计划开始",
-      "contentTitle": "将营销交给我们， 让您的业务轻松腾飞",
+      "contentTitle": "将营销交给我们，<br>让您的业务轻松腾飞",
       "contentBtn": "立即免费谘询",
       "paid": "广告投放",
       "web": "网站设计开发",

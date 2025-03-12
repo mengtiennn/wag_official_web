@@ -1,8 +1,8 @@
 <template>
-  <div class="h-full my-[8rem] flex flex-col justify-center items-center mobile:!mt-[2rem] mobile:!mb-0">
+  <div class="h-full mt-[8rem] mb-[15rem] flex flex-col justify-center items-center mobile:!mt-[2rem] mobile:!mb-0">
     <div class="w-[60%] mobile:w-[90%]">
       <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">{{ $t('Contact.title') }}</div>
-      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">{{ $t('Contact.subTitle') }}</div>
+      <div class="Roboto font-[500] text-[36px] mobile:text-[20px] leading-[1]" v-html="$t('Contact.subTitle')" />
     </div>
     <div class="w-[60%] mt-[50px] flex flex-col gap-[2rem] mobile:w-[90%]">
       <div class="flex gap-[32px] mobile:flex-col">

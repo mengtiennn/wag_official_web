@@ -120,6 +120,7 @@ export default {
         mobile: { max: "600px" },
         miniPad: { max: "768px" },
         underMac: { max: "1144px" },
+        bigScreen: { min: "1200px" },
         laptop: { min: "601px", max: "1144px" },
         desktop: { min: "1145px" },
       },
