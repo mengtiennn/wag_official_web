@@ -1,8 +1,8 @@
 <template>
   <div class="h-full mt-[8rem] mb-[15rem] flex flex-col justify-center items-center mobile:!mt-[2rem] mobile:!mb-0">
     <div class="w-[60%] mobile:w-[90%]">
-      <div class="Roboto font-[500] text-[36px] mobile:text-[20px]">{{ $t('Contact.title') }}</div>
-      <div class="Roboto font-[500] text-[36px] mobile:text-[20px] leading-[1]" v-html="$t('Contact.subTitle')" />
+      <div class="Roboto font-[500] text-[36px] mobile:text-[24px] mobile:text-center">{{ $t('Contact.title') }}</div>
+      <div class="Roboto font-[500] text-[36px] mobile:text-[24px] leading-[1] mobile:text-center" v-html="$t('Contact.subTitle')" />
     </div>
     <div class="w-[60%] mt-[50px] flex flex-col gap-[2rem] mobile:w-[90%]">
       <div class="flex gap-[32px] mobile:flex-col">
@@ -50,10 +50,10 @@
     <div class="w-full bg-[#F0F0F0] hidden mobile:flex flex-col gap-[2rem] justify-center items-center mt-[3rem] py-[5rem]">
       <div class="w-[90%] text-[20px]" v-html="$t('sendEmail.title')" />
       <div class="w-[90%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-1">
-        <inputText class="w-[95%]" :modelValue="nameModel" :placeHolder="$t('sendEmail.placeholder')" />
+        <inputText class="w-[95%] inputTextChange" :modelValue="nameModel" :placeHolder="$t('footer.Contact.name')" />
       </div>
       <div class="w-[90%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-1">
-        <inputText class="w-[95%]" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+        <inputText class="w-[95%] inputTextChange" :modelValue="emailModel" :placeHolder="$t('footer.Contact.email')" />
         <img class="w-[5%]" src="@/assets/img/arrowRight.svg" alt="">
       </div>
     </div>
@@ -141,5 +141,8 @@ const isFormValid = computed(() => {
 <style lang="scss" scoped>
 .Roboto {
   font-family: 'Roboto', sans-serif;
+}
+.inputTextChange::placeholder{
+  color: #B4B4B4;
 }
 </style>

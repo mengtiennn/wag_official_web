@@ -52,7 +52,7 @@ const nameModel = ref('')
   </div>
   <div class="hidden mobile:block">
     <div>
-      <div class="border-y-[2px] border-solid border-[#F7F7F7] py-[1rem] pl-10">{{ $t('footer.company.title') }}</div>
+      <div class="border-y-[2px] border-solid border-[#F7F7F7] py-[1rem] pl-10 font-bold">{{ $t('footer.company.title') }}</div>
       <div class="flex flex-col gap-[11px] my-3">
         <div class="pl-10">{{ $t('footer.company.about') }}</div>
         <div class="pl-10">{{ $t('footer.company.blog') }}</div>
@@ -62,7 +62,7 @@ const nameModel = ref('')
       </div>
     </div>
     <div>
-      <div class="border-y-[2px] border-solid border-[#F7F7F7] py-[1rem] pl-10">{{ $t('footer.contact.title') }}</div>
+      <div class="border-y-[2px] border-solid border-[#F7F7F7] py-[1rem] pl-10 font-bold">{{ $t('footer.contact.title') }}</div>
       <div class="flex flex-col gap-[11px] my-3">
         <div class="pl-10">{{ $t('footer.contact.phone') }}</div>
         <div class="pl-10">contact@wag.marketing</div>

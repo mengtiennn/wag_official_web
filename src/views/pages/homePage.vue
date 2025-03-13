@@ -7,6 +7,7 @@ const gimmickList = ref([
   'first', 'second', 'third', 'fourth', 'fifth'
 ])
 
+const nameModel = ref('')
 const emailModel = ref('')
 
 const words = ['paid ads', 'website', 'design', 'traffic', 'growth']
@@ -42,6 +43,8 @@ const splideOption = {
   perPage: 3,
   arrows: false,
   omitEnd: true,
+  autoplay: true,
+  interval: 3000,
   padding: { left: '5%', right: '10%' },
   pagination: false,
   gap: '20px',
@@ -82,27 +85,27 @@ const splideOption = {
     </div>
     <!-- banner mobile -->
     <div class="hidden underMac:flex justify-center pt-[3rem]">
-      <div class="w-[80vw]">
-        <div class="Roboto font-[400] text-[24px] text-black max-w-[500px] leading-relaxed tracking-[4%] text-center">{{
+      <div class="w-[80vw] flex flex-col justify-center items-center">
+        <div class="Roboto font-[400] text-[28px] text-black max-w-[500px] leading-[1.2] tracking-[4%] text-center">{{
           $t('banner.title') }}</div>
-        <div class="Roboto font-[300] text-[14px] leading-[28.13px] mt-[3px] text-center">{{ $t('banner.contentM') }}
+        <div class="Roboto font-[300] text-[15px] leading-[1.2] mt-[3px] text-center">{{ $t('banner.contentM') }}
         </div>
         <div
-          class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer w-full text-center justify-center">
+          class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[10px] px-[12px] rounded-[8px] font-light text-white text-[18px] mt-[29px] cursor-pointer w-[80%] text-center justify-center">
           {{ $t('banner.button') }}</div>
       </div>
     </div>
 
     <!-- 數值區 -->
     <div id="gimmick" class="flex justify-between py-[2.5rem] mobile:overflow-auto mobile:flex-wrap mobile:hidden bigScreen:justify-center">
-      <div class="max-w-[1200px] flex w-full justify-evenly">
+      <div class="max-w-[1200px] flex w-full justify-between">
         <div v-for="(item, index) in gimmickList" :key="index" class="text-center mobile:w-[50%]"
           v-html="$t(`Gimmick.${item}`)" />
       </div>
     </div>
 
     <!-- 數值區mobile -->
-    <div class="hidden miniPad:flex mt-[20px]">
+    <div class="hidden overflow-hidden miniPad:flex mt-[20px]">
       <Splide :options="splideOption">
         <SplideSlide v-for="(item, index) in gimmickList" :key="index">
           <div v-html="$t(`GimmickM.${item}`)"
@@ -133,7 +136,7 @@ const splideOption = {
     <!-- mobile -->
     <div id="paidAD">
       <div class="hidden mobile:flex mobile:flex-col px-[10%] gap-[2.5rem] mt-[30px]">
-        <div class="text-[20px] text-center" v-html="$t('paidAD.mbContent')" />
+        <div class="text-[15px] text-center" v-html="$t('paidAD.mbContent')" />
         <img class="rounded-[2rem]" src="@/assets/img/light.png" alt="">
       </div>
     </div>
@@ -179,26 +182,26 @@ const splideOption = {
           </div>
         </div>
       </div>
-      <div class="hidden mobile:flex flex-col px-[10%] my-[6rem]">
+      <div class="hidden mobile:flex flex-col my-[6rem]">
         <div class="text-[24px] Roboto text-center" v-html="$t('feature.mobile.title')" />
         <div class="flex flex-wrap">
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.paid')" />
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.Website')" />
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.SMS')" />
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.Local')" />
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.Social')" />
           <div
-            class="w-[45%] text-center m-[2.5%] bg-white py-[24px] px-[42px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
+            class="w-[45%] text-center m-[2.5%] font-light bg-white py-[24px] rounded-lg border-[1px] border-solid border-[#D8D8D8]"
             v-html="$t('feature.mobile.Graphic')" />
         </div>
         <div class="flex justify-center mt-[1.5rem] bg-[#DF6E00] text-white text-[18px] py-[0.5rem] rounded-lg">{{
@@ -219,9 +222,9 @@ const splideOption = {
     <!-- How WAG works -->
     <div class="w-full items-center flex justify-between flex-col mt-[10rem]">
       <div class="flex flex-col items-center underMac:gap-[8px]">
-        <span class="Roboto text-[36px] font-[500] leading-[56.25px] underMac:text-[24px] underMac:leading-[30px]">{{
+        <span class="Roboto text-[32px] font-[500] leading-[56.25px] underMac:text-[24px] underMac:leading-[30px]">{{
           $t('howWagWorks.title') }}</span>
-        <span class="text-[#545F71] leading-[22px] w-[80vw] underMac:text-center underMac:text-[14px] text-center">{{
+        <span class="text-[#545F71] leading-[22px] w-[80vw] underMac:text-center underMac:text-[15px] text-center">{{
           $t('howWagWorks.subTitle') }}</span>
       </div>
       <div
@@ -232,7 +235,7 @@ const splideOption = {
           <div class="border-[1px] border-[#D8D8D8] rounded-[26px]">
             <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-full">
             <div
-              class="bg-white py-[30px] h-[125px] text-center font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center leading-[1.2]"
+              class="bg-white py-[20px] h-[125px] text-center font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center leading-[1.2] mobile:p-0 mobile:h-[70px]"
               :class="{'px-[40px]': idx == 0}">
               {{ $t(`howWagWorks.${card.title}`) }}
             </div>
@@ -240,7 +243,7 @@ const splideOption = {
         </div>
       </div>
       <div
-        class="mt-[5rem] w-full bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px] bigScreen:max-w-[1200px]">
+        class="mt-[5rem] w-full bg-white py-[60px] rounded-[7px] flex items-center justify-center border-[#D8D8D8] border-[1px] bigScreen:max-w-[1200px] mobile:py-[30px]">
         <div class="w-full flex justify-evenly items-center underMac:hidden">
           <div class="flex flex-col gap-[20px]">
             <div class="text-[32px] leading-[36px] Roboto max-w-[384px]" v-html="$t('howWagWorks.contentTitle')" />
@@ -255,7 +258,7 @@ const splideOption = {
             </div>
           </div>
         </div>
-        <div class="hidden underMac:flex flex-col gap-[15px]">
+        <div class="hidden underMac:flex flex-col gap-[15px] px-[10%]">
           <div class="text-[20px] Roboto font-[400]">{{ $t('howWagWorks.titleM') }}</div>
           <div class="flex flex-col gap-[24px] mt-[12px]">
             <div v-for="x in worksM" :key="x" class="flex gap-[9px]">
@@ -271,18 +274,18 @@ const splideOption = {
     </div>
 
     <!-- Mobile: How We Make It Happen -->
-    <div class="hidden miniPad:flex flex-col w-full items-center mt-[50px]">
+    <div class="hidden miniPad:flex flex-col w-full items-center mt-[50px] mobile:mt-[90px]">
       <div class="w-[85vw] flex flex-col items-center">
         <span class="text-[24px] font-[400] Roboto">{{ $t('HowCard.title') }}</span>
         <Splide :options="{ rewind: true, arrows: false, width: '90vw' }" aria-label="My Favorite Images">
           <SplideSlide v-for="item in 3" :key="item">
             <div class="flex justify-center mt-[25px]">
-              <div class="flex justify-evenly w-[80%] gap-[1.5rem] mb-[50px]">
-                <div class="bg-[#F5F5F5] border-[1px] border-[#DF6E00] pt-[30px] px-[25px] rounded-[8px]">
+              <div class="flex justify-evenly w-[90%] gap-[1.5rem] mb-[50px] mobile:mb-[20px]">
+                <div class="bg-[#fff] pt-[30px] px-[25px] rounded-[8px]">
                   <img src="@/assets/img/light.png" alt="" class="rounded-[8px] object-contain">
                   <div class="my-[1rem] flex flex-col gap-[14px]">
                     <div
-                      class="w-max text-white bg-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
+                      class="w-max text-[#DF6E00] bg-[#fff] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
                       {{ $t(`paidADList.card${item}.tag`) }}</div>
                     <div>{{ $t(`paidADList.card${item}.content`) }}</div>
                     <div class="font-[600]">{{ $t(`paidADList.card${item}.title`) }}</div>
@@ -293,7 +296,7 @@ const splideOption = {
           </SplideSlide>
         </Splide>
         <div
-          class="w-max text-[#DF6E00] bg-transparent border-[#DF6E00] text-[18px] border-[1px] border-solid px-[79px] py-[8px] rounded-[8px] cursor-pointer mt-[30px]">
+          class="w-max text-[#DF6E00] bg-transparent border-[#DF6E00] text-[18px] border-[1px] border-solid px-[79px] py-[8px] rounded-[8px] cursor-pointer mt-[30px] mobile:mt-[10px]">
           {{ $t('HowCard.button') }}</div>
       </div>
     </div>
@@ -315,10 +318,13 @@ const splideOption = {
         </div>
       </div>
     </div>
-    <div class="hidden mobile:flex flex-col gap-[2rem] justify-center items-center my-[3rem]">
-      <div class="w-[80%] text-[20px]" v-html="$t('sendEmail.title')" />
-      <div class="w-[80%] flex border-b-[1px] border-solid border-[#7C7C7C] pb-5">
-        <inputText class="w-[95%]" :modelValue="emailModel" :placeHolder="$t('sendEmail.placeholder')" />
+    <div class="hidden mobile:flex flex-col gap-[2rem] justify-center items-center my-[3rem] mobile:mt-[8rem]">
+      <div class="w-full text-[20px]" v-html="$t('sendEmail.title')" />
+      <div class="w-full flex border-b-[1px] border-solid border-[#7C7C7C] pb-1">
+        <inputText class="w-[95%] inputTextChange" :modelValue="nameModel" :placeHolder="$t('footer.Contact.name')" />
+      </div>
+      <div class="w-full flex border-b-[1px] border-solid border-[#7C7C7C] pb-5">
+        <inputText class="w-[95%] inputTextChange" :modelValue="emailModel" :placeHolder="$t('footer.Contact.email')" />
         <img class="w-[5%]" src="@/assets/img/arrowRight.svg" alt="">
       </div>
     </div>
