@@ -133,5 +133,8 @@
       "marketToContact": "市场合作联系",
       "message": "请留下您的需求",
       "send": "SEND"
+    },
+    "Step": {
+      "btn": "NEXT"
     }
 }

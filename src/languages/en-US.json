@@ -140,5 +140,8 @@
     "marketToContact": "Market to contact",
     "message": "Message",
     "send": "SEND"
+  },
+  "Step": {
+    "btn": "NEXT"
   }
 }

@@ -2,6 +2,8 @@
 import inputText from 'primevue/inputtext'
 import { ref, onMounted, onUnmounted } from "vue";
 import { useI18n } from 'vue-i18n'
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
 const { t, locale } = useI18n()
 const gimmickList = ref([
   'first', 'second', 'third', 'fourth', 'fifth'
@@ -54,7 +56,11 @@ const splideOption = {
       perPage: 2,
       padding: { left: 0, right: '20%' }
     },
+    
   }
+}
+const goToStepForm = () => {
+  router.push('/stepForm')
 }
 </script>
 <template>
@@ -68,7 +74,7 @@ const splideOption = {
           </div>
           <div class="Roboto font-[300] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
           <div
-            class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]">
+            class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]" @click="goToStepForm()">
             {{ $t('banner.button') }}</div>
         </div>
         <div class="relative">
