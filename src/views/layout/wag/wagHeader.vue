@@ -19,7 +19,7 @@ const routerData = reactive([
 
 const lang = ref('')
 const langList = ref([
-  { label: 'EN', value: 'en-US' },
+  { label: 'English', value: 'en-US' },
   { label: '中文', value: 'zh-TW' }
 ])
 const showHamburger = ref(false)
@@ -59,13 +59,13 @@ onMounted(() => {
         </div>
       </div>
       <div class="underMac:hidden flex gap-[3rem]">
-        <div class="bg-[#DF6E00] px-[10px] py-[12px] font-bold text-[15px] rounded-[8px] text-white cursor-pointer"
+        <div class="bg-[#DF6E00] px-[10px] py-[12px] font-light text-[15px] rounded-[3px] text-white cursor-pointer"
           @click="goToStepForm()">
           {{ $t('banner.button') }}
         </div>
         <div class="border-[1px] border-[#000000] rounded-[4px] flex items-center">
           <Select v-model="lang" :options="langList" optionLabel="label" optionValue="value"
-            @change="handleLanguageChange" class="h-[38px] w-[100px]" />
+            @change="handleLanguageChange" class="h-[38px] w-max" />
         </div>
       </div>
     </div>
