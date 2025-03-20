@@ -27,7 +27,8 @@ const nameModel = ref('')
           <div class="mb-[22px] font-bold">{{ $t('footer.contact.title') }}</div>
           <div class="flex flex-col gap-[11px]">
             <div>{{ $t('footer.contact.phone') }}</div>
-            <div>{{ $t('footer.contact.mail') }}</div>
+            <div>{{ 'contact@wag.marketing' }}</div>
+            <!-- <div>{{ $t('footer.contact.mail') }}</div> -->
           </div>
         </div>
         <div class="flex justify-center gap-4">
