@@ -147,6 +147,57 @@
     "send": "SEND"
   },
   "Step": {
-    "btn": "NEXT"
+    "btn": "NEXT",
+    "Step1": {
+      "title": "Choose your industry",
+      "Restaurant": "Restaurant",
+      "BeverageShops": "Beverage Shops",
+      "MedicalAesthetics": "Medical Aesthetics",
+      "SpaMassage": "Spa & Massage",
+      "InteriorDesign": "Interior Design",
+      "NailSalon": "Nail Salon",
+      "HairSalon": "Hair Salon",
+      "RenovationCompanies": "Renovation Companies",
+      "Others": "Others",
+      "ProfessionalServices": "Professional Services",
+      "TattooStudio": "Tattoo Studio",
+      "FurnitureBuildingMaterials": "Furniture & Building Materials",
+      "EntertainmentLifestyle": "Entertainment & Lifestyle"
+    },
+    "Step2": {
+      "title": "Marketing Services You’re Interested In",
+      "subTitle": "Select up to 3",
+      "PaidAdvertising": "Paid Advertising",
+      "WebsiteDevelopment": "Website Development",
+      "SMSMarketing": "SMS Marketing",
+      "LocalBusinessMarketing": "Local Business Marketing",
+      "SocialMediaManagement": "Social Media Management",
+      "GraphicDesign": "Graphic Design"
+    },
+    "Step3": {
+      "title": "Current Challenges",
+      "subTitle": "This will help us gain a better understanding of your business.<br>(Select up to 3)",
+      "InsufficientBrandExposure": "Insufficient Brand Exposure",
+      "DifficultyReachingTargetAudience": "Difficulty Reaching Target Audience",
+      "LowCustomerLoyalty": "Low Customer Loyalty",
+      "IntenseCompetition": "Intense Competition",
+      "NegativeOnlineReviewsandReputation": "Negative Online Reviews and Reputation",
+      "DifficultywithDigitalTransformation": "Difficulty with Digital Transformation",
+      "LackofMarketingStrategyandPlanning": "Lack of Marketing Strategy and Planning",
+      "SeasonalSalesFluctuations": "Seasonal Sales Fluctuations",
+      "HighAdvertisingCosts": "High Advertising Costs",
+      "InsufficientWebsiteTraffic": "Insufficient Website Traffic",
+      "others": "Others"
+    },
+    "Step4": {
+      "title": "Contact Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "email": "Email",
+      "companyLocation": "Company location",
+      "companyWebsite": "Company website",
+      "send": "SEND"
+    }
   }
 }

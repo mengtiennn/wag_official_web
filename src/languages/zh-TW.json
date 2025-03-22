@@ -140,6 +140,57 @@
       "send": "SEND"
     },
     "Step": {
-      "btn": "NEXT"
+      "btn": "下一页",
+      "Step1": {
+        "title": "请选择您的产业",
+        "Restaurant": "餐馆",
+        "BeverageShops": "奶茶店",
+        "MedicalAesthetics": "医美中心",
+        "SpaMassage": "Spa & 按摩",
+        "InteriorDesign": "室内设计",
+        "NailSalon": "美甲店",
+        "HairSalon": "理发店",
+        "RenovationCompanies": "装修公司",
+        "Others": "其他",
+        "ProfessionalServices": "专业服务",
+        "TattooStudio": "纹身店",
+        "FurnitureBuildingMaterials": "建筑材料",
+        "EntertainmentLifestyle": "娱乐产业Restaurant"
+      },
+      "Step2": {
+        "title": "您感兴趣的行销服务",
+        "subTitle": "最多选择 3 项",
+        "PaidAdvertising": "广告投放",
+        "WebsiteDevelopment": "网站设计开发",
+        "SMSMarketing": "邮件&短信营销",
+        "LocalBusinessMarketing": "活动策划与地推",
+        "SocialMediaManagement": "社群平台运营管理",
+        "GraphicDesign": "各式海报设计"
+      },
+      "Step3": {
+        "title": "您当前面临的挑战",
+        "subTitle": "这将帮助我们更好地了解您的业务。<br>(最多选择 3 项)",
+        "InsufficientBrandExposure": "品牌曝光不足",
+        "DifficultyReachingTargetAudience": "难以触及目标受众",
+        "LowCustomerLoyalty": "客户忠诚度低",
+        "IntenseCompetition": "激烈竞争",
+        "NegativeOnlineReviewsandReputation": "负面在线评论和声誉",
+        "DifficultywithDigitalTransformation": "数字转型困难",
+        "LackofMarketingStrategyandPlanning": "缺乏营销策略和规划",
+        "SeasonalSalesFluctuations": "季节性销售波动",
+        "HighAdvertisingCosts": "高广告成本",
+        "InsufficientWebsiteTraffic": "网站流量不足",
+        "others": "其他"
+      },
+      "Step4": {
+        "title": "请留下您的联系资讯",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "phone": "电话",
+        "email": "邮箱",
+        "companyLocation": "公司资讯",
+        "companyWebsite": "公司网站",
+        "send": "发送"
+      }
     }
 }

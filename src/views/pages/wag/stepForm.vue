@@ -8,38 +8,38 @@ const router = useRouter()
 const nowStep = ref(1)
 const categories = ref([
   { id: 1, label: 'Restaurant' },
-  { id: 2, label: 'Beverage Shops' },
-  { id: 3, label: 'Medical Aesthetics' },
-  { id: 4, label: 'Spa & Massage' },
-  { id: 5, label: 'Interior Design' },
-  { id: 6, label: 'Nail Salon' },
-  { id: 7, label: 'Hair Salon' },
-  { id: 8, label: 'Renovation Companies' },
+  { id: 2, label: 'BeverageShops' },
+  { id: 3, label: 'MedicalAesthetics' },
+  { id: 4, label: 'SpaMassage' },
+  { id: 5, label: 'InteriorDesign' },
+  { id: 6, label: 'NailSalon' },
+  { id: 7, label: 'HairSalon' },
+  { id: 8, label: 'RenovationCompanies' },
   { id: 9, label: 'Others' },
-  { id: 10, label: 'Professional Services' },
-  { id: 11, label: 'Tattoo Studio' },
-  { id: 12, label: 'Furniture & Building Materials' },
-  { id: 13, label: 'Entertainment & Lifestyle' }
+  { id: 10, label: 'ProfessionalServices' },
+  { id: 11, label: 'TattooStudio' },
+  { id: 12, label: 'FurnitureBuildingMaterials' },
+  { id: 13, label: 'EntertainmentLifestyle' }
 ])
 const options = ref([
-  { id: 1, label: 'Paid Advertising' },
-  { id: 2, label: 'Website Development' },
-  { id: 3, label: 'SMS + Email Marketing' },
-  { id: 4, label: 'Local Business Marketing' },
-  { id: 5, label: 'Social Media Management' },
-  { id: 6, label: 'Graphic Design' }
+  { id: 1, label: 'PaidAdvertising' },
+  { id: 2, label: 'WebsiteDevelopment' },
+  { id: 3, label: 'SMSMarketing' },
+  { id: 4, label: 'LocalBusinessMarketing' },
+  { id: 5, label: 'SocialMediaManagement' },
+  { id: 6, label: 'GraphicDesign' }
 ])
 const challenges = ref([
-  { id: 1, label: 'Insufficient Brand Exposure' },
-  { id: 2, label: 'Difficulty Reaching Target Audience' },
-  { id: 3, label: 'Low Customer Loyalty' },
-  { id: 4, label: 'Intense Competition' },
-  { id: 5, label: 'Negative Online Reviews and Reputation' },
-  { id: 6, label: 'Difficulty with Digital Transformation' },
-  { id: 7, label: 'Lack of Marketing Strategy and Planning' },
-  { id: 8, label: 'Seasonal Sales Fluctuations' },
-  { id: 9, label: 'High Advertising Costs' },
-  { id: 10, label: 'Insufficient Website Traffic' }
+  { id: 1, label: 'InsufficientBrandExposure' },
+  { id: 2, label: 'DifficultyReachingTargetAudience' },
+  { id: 3, label: 'LowCustomerLoyalty' },
+  { id: 4, label: 'IntenseCompetition' },
+  { id: 5, label: 'NegativeOnlineReviewsandReputation' },
+  { id: 6, label: 'DifficultywithDigitalTransformation' },
+  { id: 7, label: 'LackofMarketingStrategyandPlanning' },
+  { id: 8, label: 'SeasonalSalesFluctuations' },
+  { id: 9, label: 'HighAdvertisingCosts' },
+  { id: 10, label: 'InsufficientWebsiteTraffic' }
 ])
 const selectedOptions = ref([]);
 
@@ -124,17 +124,17 @@ const goHome = () => {
 }
 </script>
 <template>
-  <div class="w-screen h-screen bg-[#F5F5F5]">
-    <div class="w-screen h-[calc(100vh-90.5px-105px)]">
+  <div class="w-screen bg-[#F5F5F5]" :class="[nowStep === 5 ? 'h-[calc(100vh-90.5px-305px)]' : 'h-screen']">
+    <div class="w-screen h-[calc(100vh-90.5px-105px)]" :class="[nowStep === 5 ? 'h-[calc(100vh-90.5px-305px)] flex items-center justify-center' : 'h-[calc(100vh-90.5px-105px)]']">
       <!-- step1 -->
       <div class="flex flex-col items-center pt-[80px]" v-if="nowStep == 1">
-        <span class="text-[36px]">Choose your industry</span>
+        <span class="text-[36px]">{{ $t('Step.Step1.title') }}</span>
         <div class="flex flex-wrap gap-[25px] justify-center max-w-[500px] mt-[50px]">
           <div v-for="(category, index) in categories" :key="index"
             class="rounded-[8px] px-4 py-2 border border-[#D7D7D7] bg-white cursor-pointer transition-all duration-200 text-center"
             :class="{ '!border-[#DF6E00] bg-white text-[#DF6E00]': selectedCategory && selectedCategory.id === category.id }"
             @click="selectCategory(category)">
-            <span class="text-sm md:text-base font-medium">{{ category.label }}</span>
+            <span class="text-sm md:text-base font-medium">{{ $t(`Step.Step1.${category.label}`) }}</span>
           </div>
         </div>
       </div>
@@ -143,37 +143,37 @@ const goHome = () => {
 
       <!-- step2 -->
       <div v-if="nowStep == 2" class="flex flex-col items-center pt-[100px]">
-        <span class="text-[36px]">Marketing Services You’re Interested In</span>
-        <span class="text-[#818181] text-[13px] font-[300] mt-[6px]">Select up to 3</span>
+        <span class="text-[36px]">{{ $t('Step.Step2.title') }}</span>
+        <span class="text-[#818181] text-[13px] font-[300] mt-[6px]">{{ $t('Step.Step2.subTitle') }}</span>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[633px] mt-[49px]">
           <div v-for="(option, index) in options" :key="index"
             class="rounded-[8px] px-4 py-2 border border-[#D7D7D7] bg-white cursor-pointer transition-all duration-200 text-center"
             :class="{ '!border-[#DF6E00] bg-white text-[#DF6E00]': isSelected2(option) }" @click="toggleOption(option)">
-            <span class="text-lg font-medium">{{ option.label }}</span>
+            <span class="text-lg font-medium">{{ $t(`Step.Step2.${option.label}`) }}</span>
           </div>
         </div>
       </div>
 
       <!-- step 3 -->
       <div v-if="nowStep == 3" class="flex flex-col items-center pt-[30px]">
-        <span class="text-[36px]">Current Challenges</span>
-        <span class="text-[#818181] text-[13px] font-[300] mt-[6px]">This will help us gain a better understanding of
-          your business.<br />(Select up to 3)</span>
+        <span class="text-[36px]">{{ $t('Step.Step3.title') }}</span>
+        <span class="text-[#818181] text-[13px] font-[300] mt-[6px]">{{ $t('Step.Step3.subTitle') }}</span>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[700px] mt-[49px]">
           <div v-for="(option, index) in challenges" :key="index"
             class="rounded-[8px] px-4 py-2 border border-[#D7D7D7] bg-white cursor-pointer transition-all duration-200 text-center"
             :class="{ '!border-[#DF6E00] bg-white text-[#DF6E00]': isSelected3(option) }"
             @click="toggleChallenge(option)">
-            <span class="text-lg font-medium">{{ option.label }}</span>
+            <span class="text-lg font-medium">{{ $t(`Step.Step3.${option.label}`) }}</span>
           </div>
         </div>
-        <Textarea id="description" v-model="otherText" placeholder="Others"
+        <Textarea id="description" v-model="otherText" :placeholder="$t('Step.Step3.others')"
           class="w-[700px] h-[104px] mt-[29px] px-[10px] py-[15px]" />
       </div>
 
       <!-- step 4 -->
       <div v-if="nowStep == 4" class="flex flex-col items-center pt-[30px]">
         <div class="w-[60%] mt-[50px] flex flex-col gap-[2rem] mobile:w-[90%]">
+          <span class="text-[36px] text-center">{{ $t('Step.Step4.title') }}</span>
           <div class="flex gap-[32px] mobile:flex-col">
             <div class="flex flex-col gap-2 w-[50%] mobile:w-full">
               <div><span class="text-red-400">*</span>{{ $t('Contact.firstName') }}</div>
@@ -193,22 +193,22 @@ const goHome = () => {
             <InputText v-model="tabledata.email" class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
           </div>
           <div class="flex flex-col gap-2">
-            <div><span class="text-red-400">*</span>Company location</div>
+            <div><span class="text-red-400">*</span>{{ $t('Step.Step4.companyLocation') }}</div>
             <InputText v-model="tabledata.companyLocation"
               class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
           </div>
           <div class="flex flex-col gap-2">
-            <div>Company website</div>
+            <div>{{ $t('Step.Step4.companyWebsite') }}</div>
             <InputText v-model="tabledata.companyWebsite"
               class="h-[40px] !border-[1px] !border-solid !border-[#252525]" />
           </div>
         </div>
         <Button :disabled="!isFormValid" @click="goFinal()"
-          pt:root="!bg-[#DF6E00] text-white w-[60%] text-center py-[1rem] mt-[39px] cursor-pointer Roboto font-[700] mobile:w-[90%]">SEND</Button>
+          pt:root="!bg-[#DF6E00] text-white w-[60%] text-center py-[1rem] mt-[39px] cursor-pointer Roboto font-[700] mobile:w-[90%]">{{ $t('Step.Step4.send') }}</Button>
       </div>
 
       <!-- step 5 -->
-      <div v-if="nowStep == 5" class="flex items-center flex-col pt-[120px]">
+      <div v-if="nowStep == 5" class="flex items-center flex-col">
         <img src="@/assets/img/final.svg" alt="">
         <div class="mt-[13px] text-[14px] font-[300] text-[#000000] text-center">Thank you for your submission! We have received
           your information and will get in touch within 3 business
