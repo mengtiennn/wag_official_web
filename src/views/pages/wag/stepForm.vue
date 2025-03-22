@@ -210,11 +210,8 @@ const goHome = () => {
       <!-- step 5 -->
       <div v-if="nowStep == 5" class="flex items-center flex-col">
         <img src="@/assets/img/final.svg" alt="">
-        <div class="mt-[13px] text-[14px] font-[300] text-[#000000] text-center">Thank you for your submission! We have received
-          your information and will get in touch within 3 business
-          days.<br />
-          If you have any urgent inquiries, feel free to contact us. We look forward to working with you!</div>
-        <div class="text-[#DF6E00] underline text-[14px] font-[300] mt-[34px] cursor-pointer" @click="goHome()">back to Home Page</div>
+        <div class="mt-[13px] text-[14px] font-[300] text-[#000000] text-center" v-html="$t('Step.Step5.content')" />
+        <div class="text-[#DF6E00] underline text-[14px] font-[300] mt-[14px] cursor-pointer" @click="goHome()">{{ $t('Step.Step5.back') }}</div>
       </div>
     </div>
 

@@ -198,6 +198,11 @@
       "companyLocation": "Company location",
       "companyWebsite": "Company website",
       "send": "SEND"
+    },
+    "Step5": {
+      "title": "Thank you for your submission!",
+      "content": "We have received your information and will get in touch within 3 business days.<br>If you have any urgent inquiries, feel free to contact us. We look forward to working with you!",
+      "back": "back to Home Page"
     }
   }
 }
