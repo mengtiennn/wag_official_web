@@ -10,11 +10,11 @@
         "contact": "联系我们"
     },
     "Gimmick": {
-        "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><br/>多年經驗",
-        "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><br/>服務客戶數",
-        "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><br/>新客觸達",
-        "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><br/>投放廣告數",
-        "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><br/>日均訂單量"
+        "first": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>8+</span><br/>多年經驗",
+        "second": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>1027+</span><br/>服務客戶數",
+        "third": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>250+</span><br/>新客觸達",
+        "fourth": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>395+</span><br/>投放廣告數",
+        "fifth": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>10+</span><br/>日均訂單量"
     },
     "paidAD" : {
         "content": "我们助力您的业务成长，提供专业<span class='text-[#DF6E00]'>付费广告</span><br/>超过1000+商家信赖之选",

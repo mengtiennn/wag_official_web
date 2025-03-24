@@ -77,7 +77,7 @@ const goToStepForm = () => {
           </div>
           <div class="Roboto font-[300] text-[20px] leading-[28.13px] mt-[3px]">{{ $t('banner.content') }}</div>
           <div
-            class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[19px] px-[24px] w-fit rounded-[8px] text-white text-[18px] mt-[29px] cursor-pointer max-w-[463px]" @click="goToStepForm()">
+            class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[12px] px-[10px] w-[175px] justify-center rounded-[3px] text-white text-[15px] mt-[29px] cursor-pointer max-w-[463px]" @click="goToStepForm()">
             {{ $t('banner.button') }}</div>
         </div>
         <div class="relative">
@@ -122,7 +122,7 @@ const goToStepForm = () => {
 
     <!-- 文字特效區塊 -->
     <div class="w-full flex justify-center my-[5rem] underMac:hidden">
-      <div id="paidAD" class="flex flex-col justify-center max-w-[80vw] items-center">
+      <div id="paidAD" class="flex flex-col justify-center max-w-[80vw] items-center leading-1">
         <div class="flex">
           <div class="text-[36px] Roboto font-[500]">{{ $t('paidAD.content1') }}</div>
           <div
@@ -134,7 +134,7 @@ const goToStepForm = () => {
             </transition-group>
           </div>
         </div>
-        <div class=" text-[36px] Roboto font-[500] mt-[-18px]">{{ $t('paidAD.content2') }}</div>
+        <div class=" text-[36px] Roboto font-[500] mt-[-32px]">{{ $t('paidAD.content2') }}</div>
       </div>
     </div>
 
@@ -152,11 +152,13 @@ const goToStepForm = () => {
         <div v-for="(item) in 3" :key="item"
           class="bg-white border-[1px] border-[#C0C0C0] pt-[30px] px-[25px] rounded-[8px]">
           <img :src="`c${item}.png`.getImg()" alt="" class="rounded-[8px] object-contain">
-          <div class="my-[1rem] flex flex-col gap-[14px]">
-            <div
-              class="w-max text-white bg-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
-              {{ $t(`paidADList.card${item}.tag`) }}</div>
-            <div>{{ $t(`paidADList.card${item}.content`) }}</div>
+          <div class="my-[1rem] flex flex-col justify-between h-auto gap-[14px]">
+            <div class="flex flex-col gap-[14px]">
+              <div
+                class="w-max text-white bg-[#DF6E00] text-[11px] font-[300] border-[#DF6E00] border-[1px] border-solid px-[10px] py-[5px] rounded-full">
+                {{ $t(`paidADList.card${item}.tag`) }}</div>
+              <div class="min-h-[72px]">{{ $t(`paidADList.card${item}.content`) }}</div>
+            </div>
             <div class="font-[600]">{{ $t(`paidADList.card${item}.title`) }}</div>
           </div>
         </div>
@@ -180,9 +182,9 @@ const goToStepForm = () => {
           </div>
         </div>
         <div class="flex flex-col justify-center items-center w-[45%] gap-[4.5rem]">
-          <div class="text-[48px]" v-html="$t('feature.subTag')" />
-          <div>
-            <div class="text-[32px] font-[700]">{{ $t('feature.Pay.title') }}</div>
+          <div class="text-[48px] leading-[1.2]" v-html="$t('feature.subTag')" />
+          <div class="w-[360px]">
+            <div class="text-[32px] font-[700] whitespace-nowrap">{{ $t('feature.Pay.title') }}</div>
             <div class="text-[#545F71]" v-html="$t('feature.Pay.content')" />
           </div>
         </div>
@@ -217,8 +219,9 @@ const goToStepForm = () => {
       class=" w-full h-[312px] flex flex-col justify-center items-center Roboto my-[2.5rem] mobile:hidden">
       <div class="bg-[#F0F0F0] flex flex-col justify-center items-center bigScreen:max-w-[1200px] w-full h-full">
         <div class="text-[#DF6E00] text-[36px] font-bold">{{ $t('Solutions.title') }}</div>
-        <div class="w-[50%] text-center text-[#545F71]">{{ $t('Solutions.content') }}</div>
+        <div class="w-[50%] text-center text-[#545F71] mt-[1rem]">{{ $t('Solutions.content') }}</div>
         <div
+          @click="router.push('/contact')"
           class="bg-[#DF6E00] text-white border-[#DF6E00] border-[1px] border-solid px-[79px] py-[12px] rounded-[8px] cursor-pointer mt-[1.5rem]">
           {{ $t('Solutions.button') }}</div>
       </div>
@@ -241,7 +244,7 @@ const goToStepForm = () => {
             <img :src="`card${idx+1}.png`.getImg()" alt="" class="w-full">
             <div
               class="bg-white py-[20px] h-[125px] text-center font-[500] w-full rounded-br-[26px] rounded-bl-[26px] justify-center flex items-center leading-[1.2] mobile:p-0 mobile:h-[70px]"
-              :class="{'px-[40px]': idx == 0}">
+              :class="{'px-[35px]': idx == 0}">
               {{ $t(`howWagWorks.${card.title}`) }}
             </div>
           </div>

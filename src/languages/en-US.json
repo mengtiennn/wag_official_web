@@ -10,11 +10,11 @@
     "contact": "CONTACT"
   },
   "Gimmick": {
-    "first": "<span class='text-[#545F71] font-[700] text-[24px]'>8+</span><br/>Years of Experience",
-    "second": "<span class='text-[#545F71] font-[700] text-[24px]'>1027+</span><br/>Clients Served",
-    "third": "<span class='text-[#545F71] font-[700] text-[24px]'>250+</span><br/>New Customers<br/>Reach",
-    "fourth": "<span class='text-[#545F71] font-[700] text-[24px]'>395+</span><br/>Ads Implemented",
-    "fifth": "<span class='text-[#545F71] font-[700] text-[24px]'>10+</span><br/>Daily Order Volume"
+    "first": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>8+</span><br/>Years of Experience",
+    "second": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>1027+</span><br/>Clients Served",
+    "third": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>250+</span><br/>New Customers<br/>Reach",
+    "fourth": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>395+</span><br/>Ads Implemented",
+    "fifth": "<span class='text-[#7E7E7E] font-[700] text-[16px]'>10+</span><br/>Daily Order Volume"
   },
   "GimmickM": {
     "first": "<span class='text-[#545F71] font-[700] text-[13px]'>8+</span>Years of Experience",
@@ -32,7 +32,7 @@
   "paidADList": {
     "card1": {
         "tag": "Paid Advertising",
-        "title": "Increase ROI",
+        "title": "Increase",
         "content": "300% Growth Through Targeted Advertising: See the Impact"
     },
     "card2": {
@@ -137,7 +137,7 @@
   },
   "Contact": {
     "title": "Grow Your Brand Online",
-    "subTitle": "Start a Conversation with Us Today!<br><span class='text-[#DF6E00] text-[20px] font-[400]'>Fill out the form now to get a free consultation!</span>",
+    "subTitle": "Start a Conversation with Us Today!<br><span class='text-[#DF6E00] text-[16px] font-light'>Fill out the form now to get a free consultation!</span>",
     "firstName": "First Name",
     "lastName": "Last Name",
     "phone": "Phone",

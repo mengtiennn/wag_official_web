@@ -3,23 +3,26 @@ import { ref } from "vue";
 import inputText from 'primevue/inputtext'
 const emailModel = ref('')
 const nameModel = ref('')
+const goUrl = (url) => {
+  window.open(url, '_blank');
+}
 </script>
 <template>
   <div class="bg-[#D8D8D8] w-screen flex justify-center gap-[5rem] py-[5rem] Roboto mobile:hidden">
     <div class="flex flex-col gap-[6rem]">
       <img class="w-[166px] h-[76px] object-contain" src="@/assets/img/logo.svg" alt="logo">
-      <div>{{ $t('footer.copyright') }}</div>
+      <div class="text-[12px] font-light text-[#676767]">{{ $t('footer.copyright') }}</div>
     </div>
     <div class=" border-[1px] border-black border-solid" />
     <div class="flex gap-[6rem]">
       <div>
         <div class="mb-[22px] font-bold">{{ $t('footer.company.title') }}</div>
         <div class="flex flex-col gap-[11px]">
-          <div>{{ $t('footer.company.about') }}</div>
-          <div>{{ $t('footer.company.blog') }}</div>
-          <div>{{ $t('footer.company.careers') }}</div>
-          <div>{{ $t('footer.company.terms') }}</div>
-          <div>{{ $t('footer.company.privacy') }}</div>
+          <div class="font-light">{{ $t('footer.company.about') }}</div>
+          <div class="font-light">{{ $t('footer.company.blog') }}</div>
+          <div class="font-light">{{ $t('footer.company.careers') }}</div>
+          <div class="font-light">{{ $t('footer.company.terms') }}</div>
+          <div class="font-light">{{ $t('footer.company.privacy') }}</div>
         </div>
       </div>
       <div class="flex flex-col justify-between">
@@ -32,10 +35,10 @@ const nameModel = ref('')
           </div>
         </div>
         <div class="flex justify-center gap-4">
-          <img class="cursor-pointer" src="@/assets/img/ig.svg" alt="">
-          <img class="cursor-pointer" src="@/assets/img/fb.svg" alt="">
-          <img class="cursor-pointer" src="@/assets/img/yt.svg" alt="">
-          <img class="cursor-pointer" src="@/assets/img/red.svg" alt="">
+          <img class="cursor-pointer" @click="goUrl('https://www.instagram.com/wag.marketing/')" src="@/assets/img/ig.svg" alt="">
+          <!-- <img class="cursor-pointer" @click="goUrl('https://www.facebook.com/wag.marketing/')" src="@/assets/img/fb.svg" alt=""> -->
+          <img class="cursor-pointer" @click="goUrl('https://www.youtube.com/@WAGMARKETING')" src="@/assets/img/yt.svg" alt="">
+          <img class="cursor-pointer" @click="goUrl('https://www.xiaohongshu.com/user/profile/64c143560000000014039181?xsec_token=ABgThItrH3_yXZ5OhrwuxqxtsoZbKxN4gM2FHcU8Bm198%3D&xsec_source=pc_search')" src="@/assets/img/red.svg" alt="">
         </div>
       </div>
     </div>

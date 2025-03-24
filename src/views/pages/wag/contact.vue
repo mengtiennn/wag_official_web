@@ -64,7 +64,7 @@ import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Select from 'primevue/select'
 import Textarea from 'primevue/textarea';
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 const tabledata = ref({
   firstName: '',
   lastName: '',
@@ -136,6 +136,15 @@ const isFormValid = computed(() => {
     tabledata.value.contact !== null &&
     tabledata.value.message.trim() !== ''
   )
+})
+const goToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+onMounted(() => {
+  goToTop()
 })
 </script>
 <style lang="scss" scoped>

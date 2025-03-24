@@ -59,7 +59,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="underMac:hidden flex gap-[3rem]">
-        <div class="bg-[#DF6E00] px-[10px] py-[12px] font-light text-[15px] rounded-[3px] text-white cursor-pointer"
+        <div class="bg-[#DF6E00] px-[10px] py-[12px] font-light text-[15px] rounded-[3px] text-white cursor-pointer w-[175px] flex justify-center"
           @click="goToStepForm()">
           {{ $t('banner.button') }}
         </div>
