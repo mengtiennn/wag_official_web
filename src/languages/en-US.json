@@ -156,27 +156,28 @@
       "SpaMassage": "Spa & Massage",
       "InteriorDesign": "Interior Design",
       "NailSalon": "Nail Salon",
-      "HairSalon": "Hair Salon",
-      "RenovationCompanies": "Renovation Companies",
-      "Others": "Others",
       "ProfessionalServices": "Professional Services",
+      "RenovationCompanies": "Renovation Companies",
+      "HairSalon": "Hair Salon",
+      "Furniture&BuildingMaterials": "Furniture & Building Materials",
+      "Entertainment&Lifestyle": "Entertainment & Lifestyle",
       "TattooStudio": "Tattoo Studio",
-      "FurnitureBuildingMaterials": "Furniture & Building Materials",
-      "EntertainmentLifestyle": "Entertainment & Lifestyle"
+      "Others": "Others"
     },
     "Step2": {
       "title": "Marketing Services You’re Interested In",
       "subTitle": "Select up to 3",
       "PaidAdvertising": "Paid Advertising",
       "WebsiteDevelopment": "Website Development",
-      "SMSMarketing": "SMS Marketing",
+      "SMSMarketing": "SMS + Email Marketing",
       "LocalBusinessMarketing": "Local Business Marketing",
       "SocialMediaManagement": "Social Media Management",
       "GraphicDesign": "Graphic Design"
     },
     "Step3": {
       "title": "Current Challenges",
-      "subTitle": "This will help us gain a better understanding of your business.<br>(Select up to 3)",
+      "subTitle": "This will help us gain a better understanding of your business.",
+      "subTitleB": "(Select up to 3)",
       "InsufficientBrandExposure": "Insufficient Brand Exposure",
       "DifficultyReachingTargetAudience": "Difficulty Reaching Target Audience",
       "LowCustomerLoyalty": "Low Customer Loyalty",
@@ -201,7 +202,7 @@
     },
     "Step5": {
       "title": "Thank you for your submission!",
-      "content": "We have received your information and will get in touch within 3 business days.<br>If you have any urgent inquiries, feel free to contact us. We look forward to working with you!",
+      "content": "Thank you for your submission! We have received your information and will get in touch within 3 business days.<br/>If you have any urgent inquiries, feel free to contact us. We look forward to working with you!",
       "back": "back to Home Page"
     }
   }

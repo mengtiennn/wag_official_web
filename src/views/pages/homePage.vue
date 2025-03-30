@@ -95,7 +95,7 @@ const goToStepForm = () => {
           $t('banner.title') }}</div>
         <div class="Roboto font-[300] text-[15px] leading-[1.2] mt-[3px] text-center">{{ $t('banner.contentM') }}
         </div>
-        <div
+        <div  @click="goToStepForm()"
           class="Roboto leading-[21.09px] bg-[#DF6E00] flex py-[10px] px-[12px] rounded-[8px] font-light text-white text-[18px] mt-[29px] cursor-pointer w-[80%] text-center justify-center">
           {{ $t('banner.button') }}</div>
       </div>

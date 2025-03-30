@@ -149,13 +149,13 @@
         "SpaMassage": "Spa & 按摩",
         "InteriorDesign": "室内设计",
         "NailSalon": "美甲店",
-        "HairSalon": "理发店",
-        "RenovationCompanies": "装修公司",
-        "Others": "其他",
         "ProfessionalServices": "专业服务",
+        "RenovationCompanies": "装修公司",
+        "HairSalon": "理发店",
+        "Furniture&BuildingMaterials": "建筑材料",
+        "Entertainment&Lifestyle": "娱乐产业",
         "TattooStudio": "纹身店",
-        "FurnitureBuildingMaterials": "建筑材料",
-        "EntertainmentLifestyle": "娱乐产业Restaurant"
+        "Others": "其他"
       },
       "Step2": {
         "title": "您感兴趣的行销服务",
@@ -169,7 +169,8 @@
       },
       "Step3": {
         "title": "您当前面临的挑战",
-        "subTitle": "这将帮助我们更好地了解您的业务。<br>(最多选择 3 项)",
+        "subTitle": "这将帮助我们更好地了解您的业务。(最多选择 3 项)",
+        "subTitleB": "(最多选择 3 项)",
         "InsufficientBrandExposure": "品牌曝光不足",
         "DifficultyReachingTargetAudience": "难以触及目标受众",
         "LowCustomerLoyalty": "客户忠诚度低",

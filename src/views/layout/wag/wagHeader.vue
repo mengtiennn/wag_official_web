@@ -47,18 +47,18 @@ onMounted(() => {
 </script>
 <template>
   <div
-    class="Roboto flex bg-[#F5F5F5] pt-[22px] pl-[90px] pr-[90px] pb-[22px] justify-center items-center laptop:justify-center tablet:justify-center laptop:pt-[10px] laptop:pb-[10px] tablet:pt-[10px] tablet:pb-[10px] fixed top-0 left-0 z-50 w-full mobile:px-6">
+    class="Roboto flex bg-[#F5F5F5] h-[90px] pt-[22px] pl-[90px] pr-[90px] pb-[22px] justify-center items-center laptop:justify-center tablet:justify-center laptop:pt-[10px] laptop:pb-[10px] tablet:pt-[10px] tablet:pb-[10px] fixed top-0 left-0 z-50 w-full mobile:px-6">
     <div class="flex justify-between items-center w-full desktop:max-w-[1200px] tablet:justify-center">
       <div class="flex items-center gap-[8rem]">
         <div class="flex items-end cursor-pointer" @click="router.push('/')">
           <img class="w-[85px] h-[40px] object-contain" src="@/assets/img/logo.svg" alt="logo">
         </div>
-        <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden">
+        <div class="flex gap-[32px] text-black laptop:hidden tablet:hidden text-[15px] mobile:hidden" v-if="route.path != '/stepForm'">
           <router-link class="cursor-pointer whitespace-nowrap" :class="{ 'font-bold': route.path == link.link }"
             v-for="(link, idx) in routerData" :key="idx" :to="link.link">{{ $t(`Header.${link.label}`) }}</router-link>
         </div>
       </div>
-      <div class="underMac:hidden flex gap-[3rem]">
+      <div class="underMac:hidden flex gap-[3rem]" v-if="route.path != '/stepForm'">
         <div class="bg-[#DF6E00] px-[10px] py-[12px] font-light text-[15px] rounded-[3px] text-white cursor-pointer w-[175px] flex justify-center"
           @click="goToStepForm()">
           {{ $t('banner.button') }}
@@ -70,7 +70,7 @@ onMounted(() => {
       </div>
     </div>
     <img src="@/assets/img/menuWhite.svg" class="absolute top-[22px] right-6 cursor-pointer desktop:hidden mac:hidden"
-      @click="showHamburger = true">
+      @click="showHamburger = true" v-if="route.path != '/stepForm'">
   </div>
   <Transition name="slide-fade">
     <div class="w-full h-full fixed top-0 left-0 bg-white z-50 flex items-center pt-[75px] flex-col"
